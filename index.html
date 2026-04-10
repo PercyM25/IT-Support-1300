@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
 <head>
     <title>Percy's IT Support</title>
@@ -7,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Percy's IT Support – Fast computer repair, WiFi setup, virus removal & IT services in Barberton, Mpumalanga. Same-day service in Extension 14. Call 069 107 2071 or WhatsApp now.">
     <meta name="keywords" content="IT support Barberton, computer repair, laptop repair, WiFi setup, virus removal, cybersecurity">
-    <title>Percy's IT Support | Computer Repair in Barberton, Mpumalanga</title>
     
     <style>
-        body { font-family: Arial; text-align: center; padding: 50px; }
-        h1 { color: #00d4ff; }
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
         
         * {
@@ -25,6 +21,7 @@
             font-family: 'Inter', system-ui, sans-serif;
             color: #1f2937;
             line-height: 1.6;
+            font-size: 16px;
         }
         
         .logo-font {
@@ -34,7 +31,7 @@
         .container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 16px;
         }
         
         /* NAVBAR */
@@ -51,43 +48,44 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 24px;
+            padding: 12px 16px;
         }
         
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
+            flex-shrink: 0;
         }
         
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             background: #00d4ff;
-            border-radius: 12px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 20px;
         }
         
         .logo h1 {
-            font-size: 28px;
+            font-size: 18px;
             font-weight: 600;
             letter-spacing: -0.5px;
         }
         
         .logo p {
-            font-size: 10px;
+            font-size: 8px;
             color: #00d4ff;
             font-weight: 600;
-            letter-spacing: 1px;
-            margin-top: -4px;
+            letter-spacing: 0.5px;
+            margin-top: -2px;
         }
         
         .nav-links {
             display: none;
-            gap: 32px;
+            gap: 24px;
             font-size: 14px;
             font-weight: 500;
         }
@@ -95,37 +93,38 @@
         .nav-links a {
             color: #374151;
             text-decoration: none;
-            position: relative;
         }
         
         .nav-links a:hover {
-            color: #111827;
+            color: #00d4ff;
         }
         
         .nav-buttons {
             display: flex;
-            gap: 16px;
+            gap: 8px;
             align-items: center;
         }
         
         .btn {
-            padding: 12px 24px;
+            padding: 10px 16px;
             border: none;
-            border-radius: 16px;
+            border-radius: 12px;
             font-weight: 600;
-            font-size: 12px;
-            letter-spacing: 1px;
+            font-size: 11px;
+            letter-spacing: 0.5px;
             cursor: pointer;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
+            white-space: nowrap;
         }
         
         .btn-quote {
             background: white;
             border: 2px solid #00d4ff;
             color: #00d4ff;
+            display: none;
         }
         
         .btn-quote:hover {
@@ -136,7 +135,7 @@
         .btn-whatsapp {
             background: #25D366;
             color: white;
-            display: none;
+            padding: 10px 14px;
         }
         
         .btn-whatsapp:hover {
@@ -147,7 +146,7 @@
         .hero {
             background: linear-gradient(90deg, #0a1729 0%, #112233 100%);
             color: white;
-            padding: 80px 24px;
+            padding: 40px 16px 50px;
             text-align: center;
         }
         
@@ -158,18 +157,18 @@
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             background: rgba(255,255,255,0.1);
-            padding: 8px 16px;
-            border-radius: 24px;
-            font-size: 12px;
-            margin-bottom: 24px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 10px;
+            margin-bottom: 16px;
             backdrop-filter: blur(10px);
         }
         
         .hero-badge span {
-            width: 8px;
-            height: 8px;
+            width: 6px;
+            height: 6px;
             background: #00d4ff;
             border-radius: 50%;
             animation: pulse 2s infinite;
@@ -181,33 +180,33 @@
         }
         
         .hero h1 {
-            font-size: 56px;
+            font-size: 28px;
             font-weight: 600;
-            letter-spacing: -1px;
-            margin-bottom: 24px;
-            line-height: 1.2;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+            line-height: 1.3;
         }
         
         .hero p {
-            font-size: 18px;
+            font-size: 14px;
             color: rgba(255,255,255,0.9);
-            margin-bottom: 32px;
-            line-height: 1.8;
+            margin-bottom: 24px;
+            line-height: 1.6;
         }
         
         .hero-buttons {
             display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
-            margin-bottom: 48px;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 32px;
         }
         
         .btn-primary {
             background: #00d4ff;
             color: #111827;
-            padding: 16px 32px;
-            font-size: 16px;
+            padding: 14px 24px;
+            font-size: 14px;
+            width: 100%;
         }
         
         .btn-primary:hover {
@@ -217,19 +216,20 @@
         .btn-secondary {
             border: 2px solid rgba(255,255,255,0.7);
             color: white;
-            padding: 16px 32px;
-            font-size: 16px;
+            padding: 14px 24px;
+            font-size: 14px;
+            width: 100%;
         }
         
         .btn-secondary:hover {
             border-color: white;
+            background: rgba(255,255,255,0.1);
         }
         
         .hero-features {
             display: flex;
-            flex-wrap: wrap;
-            gap: 32px;
-            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
             font-size: 12px;
         }
         
@@ -237,25 +237,27 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            justify-content: center;
         }
         
         .feature i {
             color: #00d4ff;
+            flex-shrink: 0;
         }
         
         /* TRUST BAR */
         .trust-bar {
             background: white;
             border-bottom: 1px solid #e5e7eb;
-            padding: 24px;
+            padding: 16px;
         }
         
         .trust-items {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 32px;
-            font-size: 12px;
+            gap: 16px;
+            font-size: 11px;
             color: #6b7280;
             font-weight: 500;
         }
@@ -263,39 +265,46 @@
         .trust-item {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+        
+        .trust-item i {
+            color: #00d4ff;
+            font-size: 14px;
         }
         
         /* SECTIONS */
         section {
-            padding: 80px 24px;
+            padding: 40px 16px;
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 64px;
+            margin-bottom: 32px;
         }
         
         .section-badge {
             display: inline-block;
             background: rgba(0, 212, 255, 0.1);
             color: #00d4ff;
-            padding: 8px 16px;
-            border-radius: 24px;
-            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         
         .section-header h2 {
-            font-size: 44px;
+            font-size: 28px;
             font-weight: 600;
             letter-spacing: -0.5px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
+            line-height: 1.3;
         }
         
         .section-header p {
-            font-size: 16px;
+            font-size: 14px;
             color: #6b7280;
             max-width: 500px;
             margin: 0 auto;
@@ -304,36 +313,37 @@
         /* CARDS */
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
+            grid-template-columns: 1fr;
+            gap: 16px;
         }
         
         .card {
             background: white;
             border: 1px solid #e5e7eb;
-            border-radius: 24px;
-            padding: 32px;
+            border-radius: 16px;
+            padding: 20px;
         }
         
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px rgba(0, 212, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.08);
         }
         
         .card-icon {
-            font-size: 40px;
-            margin-bottom: 16px;
+            font-size: 32px;
+            margin-bottom: 12px;
         }
         
         .card h3 {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         
         .card p {
             color: #6b7280;
-            font-size: 14px;
+            font-size: 13px;
+            line-height: 1.5;
         }
         
         /* ABOUT */
@@ -343,59 +353,61 @@
         
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            grid-template-columns: 1fr;
+            gap: 32px;
             align-items: center;
         }
         
         .about h2 {
-            font-size: 44px;
+            font-size: 28px;
             font-weight: 600;
             letter-spacing: -0.5px;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
+            line-height: 1.3;
         }
         
         .about p {
-            font-size: 16px;
+            font-size: 14px;
             color: #6b7280;
-            margin-bottom: 16px;
-            line-height: 1.8;
+            margin-bottom: 12px;
+            line-height: 1.6;
         }
         
         .stats {
-            display: flex;
-            gap: 32px;
-            margin-top: 48px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 32px;
         }
         
         .stat {
-            flex: 1;
+            text-align: center;
         }
         
         .stat-number {
-            font-size: 48px;
+            font-size: 28px;
             font-weight: 700;
             color: #00d4ff;
         }
         
         .stat-label {
-            font-size: 11px;
+            font-size: 10px;
             color: #6b7280;
             font-weight: 600;
-            letter-spacing: 1px;
-            margin-top: 8px;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
         }
         
         .about-image {
             background: #f3f4f6;
-            border-radius: 24px;
+            border-radius: 16px;
             aspect-ratio: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 120px;
-            border: 8px solid white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            font-size: 80px;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
         
         /* CONTACT */
@@ -406,44 +418,54 @@
         }
         
         .contact h2 {
-            font-size: 44px;
+            font-size: 28px;
             font-weight: 600;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
+            line-height: 1.3;
         }
         
         .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 48px;
-            margin-bottom: 48px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
         }
         
         .contact-item h3 {
-            font-size: 14px;
+            font-size: 12px;
             color: rgba(255,255,255,0.7);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            font-weight: 600;
         }
         
         .contact-item a {
-            font-size: 32px;
+            font-size: 20px;
             font-weight: 700;
             color: #00d4ff;
             text-decoration: none;
+            word-break: break-word;
         }
         
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        /* RESPONSIVE - TABLET */
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 24px;
             }
             
-            .btn-quote {
-                display: none;
+            nav .container {
+                padding: 16px 24px;
             }
             
-            .btn-whatsapp {
-                display: inline-flex;
+            .logo h1 {
+                font-size: 22px;
+            }
+            
+            .hero {
+                padding: 60px 24px;
             }
             
             .hero h1 {
@@ -454,32 +476,95 @@
                 font-size: 16px;
             }
             
-            .section-header h2 {
-                font-size: 32px;
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
             }
             
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                flex-direction: column;
+            .btn-primary, .btn-secondary {
+                width: auto;
             }
             
             .hero-features {
-                flex-direction: column;
-                gap: 16px;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            section {
+                padding: 60px 24px;
+            }
+            
+            .section-header h2 {
+                font-size: 36px;
+            }
+            
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 48px;
+            }
+            
+            .contact-info {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 32px;
+            }
+            
+            .contact-item a {
+                font-size: 28px;
+            }
+        }
+        
+        /* RESPONSIVE - DESKTOP */
+        @media (min-width: 1024px) {
+            .logo h1 {
+                font-size: 28px;
+            }
+            
+            .nav-links {
+                display: flex;
+            }
+            
+            .btn-quote {
+                display: inline-flex;
+            }
+            
+            .hero h1 {
+                font-size: 56px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-header h2 {
+                font-size: 44px;
+            }
+            
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .about h2 {
+                font-size: 44px;
+            }
+            
+            .contact h2 {
+                font-size: 44px;
+            }
+            
+            .contact-item a {
+                font-size: 32px;
             }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <h1>Percy's IT Support</h1>
-    <p>Computer Repair in Barberton, Mpumalanga</p>
-    <p>Call: 069 107 2071</p>
-    <a href="https://wa.me/27691072071">WhatsApp Us</a>
-
     <!-- NAVBAR -->
     <nav>
         <div class="container">
@@ -514,12 +599,12 @@
         <div class="container">
             <div class="hero-badge">
                 <span></span>
-                LOCAL IT SUPPORT IN BARBERTON, MPUMALANGA
+                LOCAL IT SUPPORT IN BARBERTON
             </div>
             
-            <h1 class="logo-font">IT Support & Computer Repair in Barberton</h1>
+            <h1 class="logo-font">IT Support & Computer Repair</h1>
             
-            <p>Fast. Reliable. Affordable.<br>Computer repair • WiFi setup • Virus removal • Networking • Cybersecurity<br><strong>Serving Extension 14, Barberton & all of Mpumalanga</strong></p>
+            <p>Fast. Reliable. Affordable.<br>Computer repair • WiFi setup • Virus removal • Networking • Cybersecurity</p>
             
             <div class="hero-buttons">
                 <button class="btn btn-primary" onclick="alert('Free quote form coming soon!')">
@@ -533,7 +618,7 @@
             <div class="hero-features">
                 <div class="feature">
                     <i class="fa-solid fa-check"></i>
-                    <span>Same-day service in Barberton</span>
+                    <span>Same-day service</span>
                 </div>
                 <div class="feature">
                     <i class="fa-solid fa-check"></i>
@@ -541,7 +626,7 @@
                 </div>
                 <div class="feature">
                     <i class="fa-solid fa-check"></i>
-                    <span>100% satisfaction guarantee</span>
+                    <span>100% satisfaction</span>
                 </div>
             </div>
         </div>
@@ -550,8 +635,8 @@
     <!-- TRUST BAR -->
     <div class="trust-bar">
         <div class="trust-items">
-            <div class="trust-item"><i class="fa-solid fa-laptop"></i> Computer & Laptop Repair</div>
-            <div class="trust-item"><i class="fa-solid fa-wifi"></i> Wi-Fi & Network Setup</div>
+            <div class="trust-item"><i class="fa-solid fa-laptop"></i> Computer Repair</div>
+            <div class="trust-item"><i class="fa-solid fa-wifi"></i> WiFi Setup</div>
             <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Cybersecurity</div>
             <div class="trust-item"><i class="fa-solid fa-cloud"></i> Cloud Backup</div>
             <div class="trust-item"><i class="fa-solid fa-virus-slash"></i> Virus Removal</div>
@@ -562,28 +647,28 @@
     <section id="why-us" style="background: white;">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">WHY CHOOSE PERCY'S IT SUPPORT</span>
+                <span class="section-badge">WHY CHOOSE PERCY'S</span>
                 <h2>Why Barberton trusts Percy's IT Support</h2>
-                <p>Local knowledge. Professional service. Real results since day one in Extension 14.</p>
+                <p>Local knowledge. Professional service. Real results.</p>
             </div>
             
             <div class="cards">
                 <div class="card">
                     <div class="card-icon">🏠</div>
-                    <h3>Local & Fast in Barberton</h3>
-                    <p>Based right in Extension 14, Barberton. Same-day service across Barberton and Mpumalanga. No travel fees locally.</p>
+                    <h3>Local & Fast</h3>
+                    <p>Based in Extension 14. Same-day service across Barberton. No travel fees locally.</p>
                 </div>
                 
                 <div class="card">
                     <div class="card-icon">🔧</div>
                     <h3>Fixed Right First Time</h3>
-                    <p>15+ years IT experience. Free diagnostics, 30-day guarantee, honest pricing — no hidden fees in Barberton.</p>
+                    <p>15+ years experience. Free diagnostics. 30-day guarantee. Honest pricing.</p>
                 </div>
                 
                 <div class="card">
                     <div class="card-icon">📞</div>
                     <h3>Always Available</h3>
-                    <p>Call, WhatsApp or email anytime. Remote IT support 7 days a week for Barberton customers.</p>
+                    <p>Call, WhatsApp or email anytime. Remote support 7 days a week.</p>
                 </div>
             </div>
         </div>
@@ -593,45 +678,45 @@
     <section id="services" style="background: #f9fafb;">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">IT SERVICES IN BARBERTON</span>
-                <h2>Computer Repair & IT Support Services</h2>
+                <span class="section-badge">IT SERVICES</span>
+                <h2>Computer Repair & IT Support</h2>
             </div>
             
             <div class="cards">
                 <div class="card">
                     <div class="card-icon">💻</div>
                     <h3>Computer & Laptop Repair</h3>
-                    <p>Screen replacement, keyboard fixes, slow PCs, blue screen, hardware upgrades — fast local service in Extension 14.</p>
+                    <p>Screen replacement, keyboard fixes, slow PCs, hardware upgrades.</p>
                 </div>
                 
                 <div class="card">
                     <div class="card-icon">📡</div>
                     <h3>Wi-Fi & Network Setup</h3>
-                    <p>Home & office WiFi, router setup, mesh systems, CCTV — reliable internet solutions in Mpumalanga.</p>
+                    <p>Home & office WiFi, router setup, mesh systems, CCTV.</p>
                 </div>
                 
                 <div class="card">
                     <div class="card-icon">🛡️</div>
                     <h3>Cybersecurity & Virus Removal</h3>
-                    <p>Full scans, ransomware protection, password setup — keep your devices safe in Barberton.</p>
+                    <p>Full scans, ransomware protection, password setup.</p>
                 </div>
                 
                 <div class="card">
                     <div class="card-icon">☁️</div>
                     <h3>Cloud Backup & Data Recovery</h3>
-                    <p>Recover lost files & set up automatic backups — trusted by Barberton homes & businesses.</p>
+                    <p>Recover lost files & set up automatic backups.</p>
                 </div>
                 
                 <div class="card">
                     <div class="card-icon">📧</div>
                     <h3>Email & Microsoft 365 Setup</h3>
-                    <p>Business email, printer setup, Google Workspace — professional IT support in Barberton.</p>
+                    <p>Business email, printer setup, Google Workspace.</p>
                 </div>
                 
                 <div class="card">
                     <div class="card-icon">📍</div>
                     <h3>Remote IT Support</h3>
-                    <p>Fix your computer instantly from anywhere — no need to wait for a visit in Barberton.</p>
+                    <p>Fix your computer instantly from anywhere.</p>
                 </div>
             </div>
         </div>
@@ -656,11 +741,11 @@
                         </div>
                         <div class="stat">
                             <div class="stat-number">98%</div>
-                            <div class="stat-label">Would recommend</div>
+                            <div class="stat-label">Recommend</div>
                         </div>
                         <div class="stat">
                             <div class="stat-number">15</div>
-                            <div class="stat-label">Years experience</div>
+                            <div class="stat-label">Years exp.</div>
                         </div>
                     </div>
                 </div>
@@ -686,14 +771,13 @@
                 </div>
                 <div class="contact-item">
                     <h3>LOCATION</h3>
-                    <a href="#">Extension 14, Barberton</a>
+                    <a href="#">Extension 14</a>
                 </div>
             </div>
             
-            <p style="font-size: 14px; color: rgba(255,255,255,0.7);">Same-day service • Free diagnostics • 90-day guarantee</p>
+            <p style="font-size: 12px; color: rgba(255,255,255,0.7);">Same-day service • Free diagnostics • 90-day guarantee</p>
         </div>
     </section>
 
 </body>
-</html>
 </html>
