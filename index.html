@@ -450,31 +450,334 @@
             text-decoration: underline;
         }
         
-        /* MODAL STYLES */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.3s ease-in;
+        /* RESPONSIVE - TABLET */
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 24px;
+            }
+            
+            nav .container {
+                padding: 16px 24px;
+            }
+            
+            .logo h1 {
+                font-size: 22px;
+            }
+            
+            .hero {
+                padding: 60px 24px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: auto;
+            }
+            
+            .hero-features {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            section {
+                padding: 60px 24px;
+            }
+            
+            .section-header h2 {
+                font-size: 36px;
+            }
+            
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 48px;
+            }
+            
+            .contact-info {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 32px;
+            }
+            
+            .contact-item a {
+                font-size: 28px;
+            }
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* RESPONSIVE - DESKTOP */
+        @media (min-width: 1024px) {
+            .logo h1 {
+                font-size: 28px;
+            }
+            
+            .nav-links {
+                display: flex;
+            }
+            
+            .btn-quote {
+                display: inline-flex;
+            }
+            
+            .hero h1 {
+                font-size: 56px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-header h2 {
+                font-size: 44px;
+            }
+            
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .about h2 {
+                font-size: 44px;
+            }
+            
+            .contact h2 {
+                font-size: 44px;
+            }
+            
+            .contact-item a {
+                font-size: 32px;
+            }
         }
-        
-        .modal-content {
-            background-color: white;
-            margin: auto;
-            padding: 24px;
-            border-radius: 16px;
-            width: 90%;
-            max-width: 500px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">💻</div>
+                <div>
+                    <h1 class="logo-font">Percy's</h1>
+                    <p>IT SUPPORT</p>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="nav-buttons">
+                <button class="btn btn-quote" onclick="alert('Free quote form coming soon!')">
+                    <i class="fa-solid fa-paper-plane"></i> GET QUOTE
+                </button>
+                <a href="https://wa.me/27691072071?text=Hi%20Percy%27s%20IT%20Support%2C%20I%20need%20help%20with%20my%20IT%20issue%20in%20Barberton!" target="_blank" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> WHATSAPP
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <span></span>
+                LOCAL IT SUPPORT IN BARBERTON
+            </div>
+            
+            <h1 class="logo-font">IT Support & Computer Repair</h1>
+            
+            <p>Fast. Reliable. Affordable.<br>Computer repair • WiFi setup • Virus removal • Networking • Cybersecurity</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="alert('Free quote form coming soon!')">
+                    <i class="fa-solid fa-paper-plane"></i> GET YOUR FREE QUOTE
+                </button>
+                <a href="https://wa.me/27691072071?text=Hi%20Percy%27s%20IT%20Support%2C%20I%20need%20help%20with%20my%20IT%20issue%20in%20Barberton!" target="_blank" class="btn btn-secondary">
+                    <i class="fa-brands fa-whatsapp"></i> CHAT ON WHATSAPP
+                </a>
+            </div>
+            
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Same-day service</span>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Call <strong>069 107 2071</strong></span>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    <span>100% satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="trust-items">
+            <div class="trust-item"><i class="fa-solid fa-laptop"></i> Computer Repair</div>
+            <div class="trust-item"><i class="fa-solid fa-wifi"></i> WiFi Setup</div>
+            <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Cybersecurity</div>
+            <div class="trust-item"><i class="fa-solid fa-cloud"></i> Cloud Backup</div>
+            <div class="trust-item"><i class="fa-solid fa-virus-slash"></i> Virus Removal</div>
+        </div>
+    </div>
+
+    <!-- WHY US -->
+    <section id="why-us" style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">WHY CHOOSE PERCY'S</span>
+                <h2>Why Barberton trusts Percy's IT Support</h2>
+                <p>Local knowledge. Professional service. Real results.</p>
+            </div>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">🏠</div>
+                    <h3>Local & Fast</h3>
+                    <p>Based in Extension 14. Same-day service across Barberton. No travel fees locally.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Fixed Right First Time</h3>
+                    <p>15+ years experience. Free diagnostics. 30-day guarantee. Honest pricing.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📞</div>
+                    <h3>Always Available</h3>
+                    <p>Call, WhatsApp or email anytime. Remote support 7 days a week.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" style="background: #f9fafb;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">IT SERVICES</span>
+                <h2>Computer Repair & IT Support</h2>
+            </div>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Computer & Laptop Repair</h3>
+                    <p>Screen replacement, keyboard fixes, slow PCs, hardware upgrades.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📡</div>
+                    <h3>Wi-Fi & Network Setup</h3>
+                    <p>Home & office WiFi, router setup, mesh systems, CCTV.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Cybersecurity & Virus Removal</h3>
+                    <p>Full scans, ransomware protection, password setup.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">☁️</div>
+                    <h3>Cloud Backup & Data Recovery</h3>
+                    <p>Recover lost files & set up automatic backups.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📧</div>
+                    <h3>Email & Microsoft 365 Setup</h3>
+                    <p>Business email, printer setup, Google Workspace.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📍</div>
+                    <h3>Remote IT Support</h3>
+                    <p>Fix your computer instantly from anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <h2 class="logo-font">Hi, I'm Percy</h2>
+                    <p>Owner of Percy's IT Support and the go-to tech expert for computer repair in Extension 14 and greater Mpumalanga.</p>
+                    
+                    <p>With over 15 years fixing computers and networks across Mpumalanga, I created Percy's IT Support to deliver honest, fast, and affordable IT help right here in Barberton.</p>
+                    
+                    <p>No call centres. No waiting days. Just one local expert who shows up and gets your IT issues sorted — same day when possible.</p>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Happy clients</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Recommend</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Years exp.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">👨‍🔧</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="logo-font">Ready to Get Your IT Fixed?</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>CALL NOW</h3>
+                    <a href="tel:0691072071">069 107 2071</a>
+                </div>
+                <div class="contact-item">
+                    <h3>WHATSAPP</h3>
+                    <a href="https://wa.me/27691072071" target="_blank">Chat with us</a>
+                </div>
+                <div class="contact-item">
+                    <h3>LOCATION</h3>
+                    <a href="#">Extension 14</a>
+                </div>
+            </div>
+            
+            <p style="font-size: 12px; color: rgba(255,255,255,0.7);">Same-day service • Free diagnostics • 90-day guarantee</p>
+        </div>
+    </section>
+
+</body>
+</html>
