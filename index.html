@@ -19,28 +19,28 @@
         
         /* 👇 SET YOUR UPLOADED IMAGE AS BACKGROUND */
         body {
-            font-family: 'Inter', system-ui, sans-serif;
-            color: #1f2937;
-            line-height: 1.6;
-            font-size: 16px;
-            background: url('background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            background-color: #0a1729; /* Fallback if image fails */
-            position: relative;
-            z-index: 0;
-        }
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1f2937;
+    line-height: 1.6;
+    font-size: 16px;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #0a1729; /* Fallback if image fails */
+    position: relative;
+    z-index: 0;
+}
         
         /* 👇 ADD DARK OVERLAY FOR TEXT READABILITY */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: -1;
-        }
+       body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
         
         .logo-font {
             font-family: 'Space Grotesk', sans-serif;
