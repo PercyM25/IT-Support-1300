@@ -22,21 +22,6 @@
             color: #1f2937;
             line-height: 1.6;
             font-size: 16px;
-            background: url('bg.jpg') no-repeat center center fixed;
-            background-size: cover;
-            position: relative;
-            z-index: 0;
-        }
-        
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: -1;
         }
         
         .logo-font {
@@ -51,7 +36,7 @@
         
         /* NAVBAR */
         nav {
-            background: rgba(255,255,255,0.95);
+            background: white;
             border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
@@ -73,11 +58,15 @@
             flex-shrink: 0;
         }
         
-        .logo img {
-            height: 48px;
-            width: 48px;
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: #00d4ff;
             border-radius: 8px;
-            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
         }
         
         .logo h1 {
@@ -135,6 +124,7 @@
             background: white;
             border: 2px solid #00d4ff;
             color: #00d4ff;
+            display: none;
         }
         
         .btn-quote:hover {
@@ -154,7 +144,7 @@
         
         /* HERO */
         .hero {
-            background: rgba(10, 23, 41, 0.85);
+            background: linear-gradient(90deg, #0a1729 0%, #112233 100%);
             color: white;
             padding: 40px 16px 50px;
             text-align: center;
@@ -257,7 +247,7 @@
         
         /* TRUST BAR */
         .trust-bar {
-            background: rgba(255,255,255,0.95);
+            background: white;
             border-bottom: 1px solid #e5e7eb;
             padding: 16px;
         }
@@ -287,7 +277,6 @@
         /* SECTIONS */
         section {
             padding: 40px 16px;
-            background: rgba(255,255,255,0.95);
         }
         
         .section-header {
@@ -359,7 +348,7 @@
         
         /* ABOUT */
         .about {
-            background: rgba(255,255,255,0.95);
+            background: white;
         }
         
         .about-content {
@@ -423,7 +412,7 @@
         
         /* CONTACT */
         .contact {
-            background: rgba(10, 23, 41, 0.85);
+            background: linear-gradient(90deg, #0a1729 0%, #112233 100%);
             color: white;
             text-align: center;
         }
@@ -578,14 +567,13 @@
 <body>
     <!-- NAVBAR -->
     <nav>
-        <div class="container">
-            <div class="Logo">
-                <img src="Logo.png" alt="Percy's IT Support Logo" style="height: 48px; width: 48px; border-radius: 8px; object-fit: cover;">
-                <div>
-                    <h1 class="Logo-font">Percy's</h1>
-                    <p>IT SUPPORT</p>
-                </div>
-            </div>
+<div class="Logo">
+    <img src="Logo.jpg" alt="Percy's IT Support Logo" style="height: 48px; width: 48px; border-radius: 8px; object-fit: cover;">
+    <div>
+        <h1 class="Logo-font">Percy's</h1>
+        <p>IT SUPPORT</p>
+    </div>
+</div>
             
             <div class="nav-links">
                 <a href="#services">Services</a>
@@ -667,7 +655,7 @@
                 <div class="card">
                     <div class="card-icon">🏠</div>
                     <h3>Local & Fast</h3>
-                    <p>Based in Barberrton, Extension 14. Same-day service across Barberton. No travel fees locally.</p>
+                    <p>Based in Extension 14. Same-day service across Barberton. No travel fees locally.</p>
                 </div>
                 
                 <div class="card">
@@ -679,7 +667,7 @@
                 <div class="card">
                     <div class="card-icon">📞</div>
                     <h3>Always Available</h3>
-                    <p>Call, WhatsApp or email anytime. Remote support 6 days a week.</p>
+                    <p>Call, WhatsApp or email anytime. Remote support 7 days a week.</p>
                 </div>
             </div>
         </div>
