@@ -17,10 +17,30 @@
             transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
         }
         
+        /* 👇 SET YOUR UPLOADED IMAGE AS BACKGROUND */
         body {
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
+            font-family: 'Inter', system-ui, sans-serif;
+            color: #1f2937;
+            line-height: 1.6;
+            font-size: 16px;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #0a1729; /* Fallback if image fails */
+            position: relative;
+            z-index: 0;
+        }
+        
+        /* 👇 ADD DARK OVERLAY FOR TEXT READABILITY */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
         
         .logo-font {
             font-family: 'Space Grotesk', sans-serif;
@@ -34,7 +54,7 @@
         
         /* NAVBAR */
         nav {
-            background: white;
+            background: rgba(255,255,255,0.95);
             border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
@@ -56,15 +76,11 @@
             flex-shrink: 0;
         }
         
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            background: #00d4ff;
+        .logo img {
+            height: 48px;
+            width: 48px;
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
+            object-fit: cover;
         }
         
         .logo h1 {
@@ -122,7 +138,6 @@
             background: white;
             border: 2px solid #00d4ff;
             color: #00d4ff;
-            display: none;
         }
         
         .btn-quote:hover {
@@ -142,7 +157,7 @@
         
         /* HERO */
         .hero {
-            background: linear-gradient(90deg, #0a1729 0%, #112233 100%);
+            background: rgba(10, 23, 41, 0.85);
             color: white;
             padding: 40px 16px 50px;
             text-align: center;
@@ -245,7 +260,7 @@
         
         /* TRUST BAR */
         .trust-bar {
-            background: white;
+            background: rgba(255,255,255,0.95);
             border-bottom: 1px solid #e5e7eb;
             padding: 16px;
         }
@@ -275,6 +290,7 @@
         /* SECTIONS */
         section {
             padding: 40px 16px;
+            background: rgba(255,255,255,0.95);
         }
         
         .section-header {
@@ -346,7 +362,7 @@
         
         /* ABOUT */
         .about {
-            background: white;
+            background: rgba(255,255,255,0.95);
         }
         
         .about-content {
@@ -410,7 +426,7 @@
         
         /* CONTACT */
         .contact {
-            background: linear-gradient(90deg, #0a1729 0%, #112233 100%);
+            background: rgba(10, 23, 41, 0.85);
             color: white;
             text-align: center;
         }
