@@ -18,14 +18,18 @@
         }
         
         /* 👇 SET YOUR UPLOADED IMAGE AS BACKGROUND */
-        body {
+       body {
     font-family: 'Inter', system-ui, sans-serif;
     color: #1f2937;
     line-height: 1.6;
     font-size: 16px;
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('background.jpg') no-repeat center top fixed;
     background-size: cover;
-    background-color: #0a1729; /* Fallback if image fails */
+    background-attachment: fixed;
+    background-color: #0a1729; /* Fallback color */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     position: relative;
     z-index: 0;
 }
@@ -38,7 +42,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     z-index: -1;
 }
         
