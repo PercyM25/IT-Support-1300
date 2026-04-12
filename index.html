@@ -909,17 +909,17 @@
         <div>
             <h3>Get Your Free Quote</h3>
             
-           form action=https://formspree.io/f/mjgpnqwz method=POST>
+        <form action="https://formspree.io/f/xnqkzgqj" method="POST">
     
     <h3 style="color:white; margin-bottom:20px;">Tell Me About Your IT Problem</h3>
     
     <!-- Basic Info -->
-    <input type="text" name="full_name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="full_name" placeholder="Full Name" required style="width:100%; padding:12px; border:1px solid rgba(0,212,255,0.3); border-radius:8px; background:rgba(255,255,255,0.1); color:white; margin-bottom:12px; font-size:14px;">
+    <input type="email" name="email" placeholder="Email Address" required style="width:100%; padding:12px; border:1px solid rgba(0,212,255,0.3); border-radius:8px; background:rgba(255,255,255,0.1); color:white; margin-bottom:12px; font-size:14px;">
+    <input type="tel" name="phone" placeholder="Phone Number" required style="width:100%; padding:12px; border:1px solid rgba(0,212,255,0.3); border-radius:8px; background:rgba(255,255,255,0.1); color:white; margin-bottom:12px; font-size:14px;">
     
     <!-- Problem Details -->
-    <select name="device_type" required>
+    <select name="device_type" required style="width:100%; padding:12px; border:1px solid rgba(0,212,255,0.3); border-radius:8px; background:rgba(15,30,50,0.9); color:white; margin-bottom:12px; font-size:14px;">
         <option value="">What device needs help?</option>
         <option value="Desktop">🖥️ Desktop Computer</option>
         <option value="Laptop">💻 Laptop</option>
@@ -927,7 +927,7 @@
         <option value="Other">🔧 Other</option>
     </select>
     
-    <select name="issue_type" required>
+    <select name="issue_type" required style="width:100%; padding:12px; border:1px solid rgba(0,212,255,0.3); border-radius:8px; background:rgba(15,30,50,0.9); color:white; margin-bottom:12px; font-size:14px;">
         <option value="">What's the main issue?</option>
         <option value="Slow Performance">⚡ Slow Performance</option>
         <option value="Virus/Malware">🦠 Virus or Malware</option>
@@ -937,10 +937,10 @@
         <option value="Other">❓ Other</option>
     </select>
     
-    <textarea name="detailed_issue" placeholder="Describe the problem in detail..." rows="5" required></textarea>
+    <textarea name="detailed_issue" placeholder="Describe the problem in detail..." rows="5" required style="width:100%; padding:12px; border:1px solid rgba(0,212,255,0.3); border-radius:8px; background:rgba(255,255,255,0.1); color:white; margin-bottom:12px; font-size:14px; resize:vertical;"></textarea>
     
     <!-- Urgency -->
-    <select name="urgency" required>
+    <select name="urgency" required style="width:100%; padding:12px; border:1px solid rgba(0,212,255,0.3); border-radius:8px; background:rgba(15,30,50,0.9); color:white; margin-bottom:12px; font-size:14px;">
         <option value="">How urgent?</option>
         <option value="Not Urgent">🟢 Not Urgent</option>
         <option value="This Week">🟡 This Week</option>
@@ -948,7 +948,7 @@
     </select>
     
     <!-- Budget -->
-    <select name="budget" required>
+    <select name="budget" required style="width:100%; padding:12px; border:1px solid rgba(0,212,255,0.3); border-radius:8px; background:rgba(15,30,50,0.9); color:white; margin-bottom:12px; font-size:14px;">
         <option value="">Budget range?</option>
         <option value="Under R500">💰 Under R500</option>
         <option value="R500-R1000">💰 R500-R1000</option>
@@ -956,12 +956,7 @@
         <option value="Not Sure">❓ Not Sure</option>
     </select>
     
-    <button type="submit">Get My Free Quote</button>
+    <button type="submit" style="width:100%; background:#00d4ff; color:#0a1729; padding:14px; border:none; border-radius:8px; font-weight:700; cursor:pointer; font-size:14px; letter-spacing:0.5px;">
+        Get My Free Quote
+    </button>
 </form>
-
-            <button type="button" onclick="document.getElementById('quoteForm').style.display='none'">Close</button>
-        </div>
-    </div>
-
-</body>
-</html>
