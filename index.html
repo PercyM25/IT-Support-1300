@@ -6,17 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Fast, reliable IT support in Barberton, Mpumalanga. Same-day computer repair, laptop repair, WiFi setup, virus removal, and networking services in Extension 14. Call 069 107 2071.">
-    <meta name="keywords" content="IT support Barberton, computer repair Barberton, laptop repair Barberton, WiFi setup Barberton, virus removal Barberton, IT services Mpumalanga, same day computer repair, cybersecurity Barberton, data recovery Barberton, remote IT support">
+    <meta name="keywords" content="IT support Barberton, computer repair Barberton, laptop repair Barberton, WiFi setup Barberton, virus removal Barberton, IT services Mpumalanga">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Percy's IT Support | Computer Repair in Barberton">
     <meta property="og:description" content="Same-day computer repair, WiFi setup, virus removal & IT services in Barberton. Local expert in Extension 14. Call 069 107 2071.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://percym25.github.io/IT-Support-1300/">
-    <meta property="og:image" content="https://percym25.github.io/IT-Support-1300/og-image.jpg"> <!-- Update with your actual image URL -->
+    <meta property="og:image" content="https://percym25.github.io/IT-Support-1300/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Percy's IT Support">
 
     <!-- JSON-LD LocalBusiness Schema -->
     <script type="application/ld+json">
@@ -38,14 +37,7 @@
         "@type": "GeoCoordinates",
         "latitude": -25.7855,
         "longitude": 31.0455
-      },
-      "openingHoursSpecification": [
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "14:00"}
-      ],
-      "priceRange": "$$",
-      "image": "https://percym25.github.io/IT-Support-1300/og-image.jpg",
-      "areaServed": "Barberton, Mpumalanga"
+      }
     }
     </script>
 
@@ -53,9 +45,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
        
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0; padding: 0; box-sizing: border-box;
             transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
         }
         html { min-height: 100%; }
@@ -73,59 +63,14 @@
             background-color: #0a1729;
         }
         body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 0;
-            pointer-events: none;
+            content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5); z-index: 0; pointer-events: none;
         }
-        nav, header, .trust-bar, section, footer {
-            position: relative;
-            z-index: 1;
-        }
+        nav, header, section { position: relative; z-index: 1; }
 
-        .logo-font { font-family: 'Space Grotesk', sans-serif; }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
+        .logo-font { font-family: 'Space Grotesk', sans-serif; }
 
-        nav {
-            background: rgba(10, 23, 41, 0.92);
-            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            backdrop-filter: blur(10px);
-        }
-        nav .container { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; }
-
-        .logo { display: flex; align-items: center; gap: 8px; }
-        .logo img { height: 48px; width: 48px; border-radius: 8px; object-fit: cover; }
-        .logo h1 { font-size: 18px; font-weight: 600; color: white; }
-        .logo p { font-size: 8px; color: #00d4ff; font-weight: 600; margin-top: -2px; }
-
-        .nav-links { display: none; gap: 24px; font-size: 14px; font-weight: 500; }
-        .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; }
-        .nav-links a:hover { color: #00d4ff; }
-
-        .nav-buttons { display: flex; gap: 8px; }
-        .btn {
-            padding: 10px 16px;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 11px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .btn-quote { background: transparent; border: 2px solid #00d4ff; color: #00d4ff; }
-        .btn-quote:hover { background: #00d4ff; color: #0a1729; }
-        .btn-whatsapp { background: #25D366; color: white; }
-
-        .hero { padding: 80px 16px 80px; text-align: center; }
         .section-header { text-align: center; margin-bottom: 32px; }
         .section-badge {
             background: rgba(0, 212, 255, 0.15);
@@ -156,52 +101,34 @@
             backdrop-filter: blur(10px);
         }
 
-        /* Review Form Styles */
-        .review-form-container {
-            background: rgba(15, 30, 50, 0.85);
-            border: 1px solid rgba(0, 212, 255, 0.3);
+        /* Google Reviews Section */
+        .google-reviews-box {
+            background: rgba(15, 30, 50, 0.9);
+            border: 2px solid #00d4ff;
             border-radius: 16px;
-            padding: 32px;
+            padding: 40px 24px;
+            text-align: center;
         }
-        .star-rating {
-            font-size: 42px;
-            color: #555;
-            cursor: pointer;
-            user-select: none;
-            margin: 16px 0;
-        }
-        .star-rating .star:hover,
-        .star-rating .star.active {
-            color: #00d4ff;
-        }
-
-        .review-form-container input,
-        .review-form-container textarea {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 16px;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(0,212,255,0.3);
-            border-radius: 8px;
+        .google-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #4285F4;
             color: white;
-            font-size: 14px;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 20px 0;
         }
-        .review-form-container button {
-            width: 100%;
-            padding: 14px;
-            background: #00d4ff;
-            color: #0a1729;
-            border: none;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 16px;
-            cursor: pointer;
+        .google-btn:hover {
+            background: #3367d6;
+            transform: translateY(-3px);
         }
-        .review-form-container button:hover { background: white; }
 
         /* Responsive */
         @media (min-width: 640px) {
-            .container { padding: 0 24px; }
             .cards { grid-template-columns: repeat(2, 1fr); gap: 24px; }
             section { padding: 60px 24px; }
             .section-header h2 { font-size: 36px; }
@@ -248,7 +175,7 @@
             <div class="nav-links">
                 <a href="#services">Services</a>
                 <a href="#reviews">Reviews</a>
-                <a href="#review-form">Leave Review</a>
+                <a href="#google-reviews">Google Reviews</a>
                 <a href="#why-us">Why Us</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
@@ -273,7 +200,7 @@
             </div>
             <h1 class="logo-font">IT Support & Computer Repair</h1>
             <p>Fast. Reliable. Affordable.<br>Computer repair • WiFi setup • Virus removal • Networking • Cybersecurity</p>
-            
+           
             <div class="hero-buttons">
                 <button class="btn btn-primary" onclick="document.getElementById('quoteForm').style.display='block'">
                     <i class="fa-solid fa-paper-plane"></i> GET YOUR FREE QUOTE
@@ -349,7 +276,34 @@
                         <div><strong>Thabo Nkosi</strong><br><small>Extension 14, Barberton</small></div>
                     </div>
                 </div>
-                <!-- Add your other two reviews here if needed -->
+                <!-- You can add your other two reviews here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- GOOGLE REVIEWS SECTION (New) -->
+    <section id="google-reviews" style="background: rgba(0, 0, 0, 0.45);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">REAL REVIEWS</span>
+                <h2>See Our Google Reviews</h2>
+                <p>Join hundreds of satisfied customers in Barberton</p>
+            </div>
+
+            <div class="google-reviews-box">
+                <h2 style="color:#00d4ff; margin-bottom: 20px;">⭐⭐⭐⭐⭐</h2>
+                <p style="font-size: 18px; max-width: 600px; margin: 0 auto 30px;">
+                    Our customers love our fast, honest, and reliable service. 
+                    Read real reviews from people in Barberton and surrounding areas.
+                </p>
+                
+                <a href="https://g.page/r/Cdd_W0kVfvz4EBM/review" target="_blank" class="google-btn">
+                    <i class="fa-brands fa-google"></i> Leave a Google Review
+                </a>
+                
+                <p style="margin-top: 30px; color: rgba(255,255,255,0.75);">
+                    Your Google review helps other local residents find trusted IT support.
+                </p>
             </div>
         </div>
     </section>
@@ -369,34 +323,6 @@
                     </div>
                 </div>
                 <div class="about-image">👨‍🔧</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW REVIEW FORM - MOVED TO BOTTOM -->
-    <section id="review-form" style="background: rgba(0, 0, 0, 0.45);">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">SHARE YOUR EXPERIENCE</span>
-                <h2>Review Our Work</h2>
-                <p>Tell other customers in Barberton about your experience</p>
-            </div>
-            <div class="review-form-container">
-                <form id="clientReviewForm" action="https://formspree.io/f/xojygkjv" method="POST">
-                    <input type="text" name="customer_name" placeholder="Your Full Name" required>
-                    
-                    <div class="star-rating" id="starRating">
-                        <span class="star" data-value="1">★</span>
-                        <span class="star" data-value="2">★</span>
-                        <span class="star" data-value="3">★</span>
-                        <span class="star" data-value="4">★</span>
-                        <span class="star" data-value="5">★</span>
-                    </div>
-                    <input type="hidden" name="rating" id="ratingInput" value="">
-
-                    <textarea name="review_text" placeholder="Write your honest review here..." rows="5" required></textarea>
-                    <button type="submit">Submit My Review</button>
-                </form>
             </div>
         </div>
     </section>
@@ -446,30 +372,11 @@
     </div>
 
     <script>
-        // Star Rating
-        const stars = document.querySelectorAll('#starRating .star');
-        const ratingInput = document.getElementById('ratingInput');
-
-        stars.forEach(star => {
-            star.addEventListener('click', () => {
-                const value = star.dataset.value;
-                ratingInput.value = value;
-                stars.forEach(s => s.classList.toggle('active', parseInt(s.dataset.value) <= parseInt(value)));
-            });
-        });
-
-        // Form feedback
-        document.getElementById('clientReviewForm').addEventListener('submit', function(e) {
-            if (!ratingInput.value) {
-                e.preventDefault();
-                alert("Please select a star rating (1-5 stars)");
-            }
-        });
-
-        // Close modal on outside click
+        // Close modal when clicking outside
         window.onclick = function(event) {
-            if (event.target.id === 'quoteForm') {
-                document.getElementById('quoteForm').style.display = "none";
+            const modal = document.getElementById('quoteForm');
+            if (event.target === modal) {
+                modal.style.display = "none";
             }
         }
     </script>
