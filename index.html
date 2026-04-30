@@ -809,33 +809,91 @@
         </div>
     </div>
 
-    <script>
-    // Make all expandable cards work
+<style>
+    /* Smooth Animations for Expandable Cards */
+    .expandable-card {
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+    }
+
+    .toggle-icon {
+        font-size: 26px;
+        transition: transform 0.4s ease;
+        flex-shrink: 0;
+    }
+
+    .service-list {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.4s ease;
+        opacity: 0;
+        padding: 0 10px;
+    }
+
+    .service-list.open {
+        max-height: 600px; /* Enough height for all items */
+        opacity: 1;
+    }
+
+    .service-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        font-size: 14.5px;
+    }
+
+    .service-item:last-child {
+        border-bottom: none;
+    }
+
+    .price {
+        color: #00d4ff;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    /* Mobile Touch Feedback */
+    .expandable-card:active {
+        transform: scale(0.98);
+    }
+</style>
+
+<script>
+    // Mobile-friendly Expandable Cards with Smooth Animation
     document.querySelectorAll('.expandable-card').forEach(card => {
         card.addEventListener('click', function(e) {
-            // Prevent clicking inside the list from collapsing
+            // Prevent trigger when clicking inside the list
             if (e.target.closest('.service-list')) return;
 
             const list = this.querySelector('.service-list');
             const icon = this.querySelector('.toggle-icon');
+            const isOpen = list.classList.contains('open');
 
-            const isOpen = list.style.display === 'block';
-
-            // Close all other cards first
-            document.querySelectorAll('.service-list').forEach(l => l.style.display = 'none');
+            // Close all other cards
+            document.querySelectorAll('.service-list').forEach(l => l.classList.remove('open'));
             document.querySelectorAll('.toggle-icon').forEach(i => i.textContent = '▼');
 
             if (!isOpen) {
-                list.style.display = 'block';
+                list.classList.add('open');
                 icon.textContent = '▲';
             }
         });
     });
 
-    // Close quote modal
+    // Close quote modal when clicking outside
     window.onclick = function(event) {
         const modal = document.getElementById('quoteForm');
-        if (event.target === modal) modal.style.display = "none";
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
     }
 </script>
 </body>
