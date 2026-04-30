@@ -380,6 +380,82 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(0, 212, 255, 0.2);
         }
+        /* Full Body Robot with Speech Bubble */
+.about-image {
+    background: rgba(15, 30, 50, 0.92);
+    border-radius: 20px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid rgba(0, 212, 255, 0.35);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.robot-container {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    animation: float 3.8s ease-in-out infinite;
+}
+
+.robot {
+    font-size: 155px;
+    position: absolute;
+    top: 15px;
+    left: 18px;
+}
+
+.spanner {
+    font-size: 48px;
+    position: absolute;
+    top: 68px;
+    left: 28px;
+    animation: swingSpanner 2.8s ease-in-out infinite;
+    transform-origin: 75% 35%;
+}
+
+.speech-bubble {
+    position: absolute;
+    background: rgba(255,255,255,0.95);
+    color: #0a1729;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    top: 12px;
+    right: -15px;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    animation: bubblePop 2s ease-in-out infinite;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 20px;
+    border: 8px solid transparent;
+    border-top-color: rgba(255,255,255,0.95);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes swingSpanner {
+    0%, 100% { transform: rotate(-35deg); }
+    50% { transform: rotate(35deg); }
+}
+
+@keyframes bubblePop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -655,16 +731,17 @@
                 </div>
             </div>
             
-            <!-- Animated Robot -->
-           <div class="about-image">
+           <!-- Full Body Animated Robot -->
+            <div class="about-image">
                 <div class="robot-container">
                     <div class="robot">🤖</div>
                     <div class="spanner">🔧</div>
-                    <div class="wave-hand">👋</div>
+                    <div class="speech-bubble">How can I be of service?</div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 </section>
 
     <!-- REVIEWS / TESTIMONIALS - MOVED TO BOTTOM -->
