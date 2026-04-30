@@ -381,54 +381,7 @@
             border: 1px solid rgba(0, 212, 255, 0.2);
         }
         /* Animated Robot */
-.about-image {
-    background: rgba(15, 30, 50, 0.9);
-    border-radius: 20px;
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 120px;
-    border: 4px solid rgba(0, 212, 255, 0.3);
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.robot-container {
-    position: relative;
-    animation: float 3s ease-in-out infinite;
-}
-
-.robot {
-    font-size: 110px;
-    transition: transform 0.4s ease;
-}
-
-.spanner {
-    position: absolute;
-    font-size: 45px;
-    top: 35%;
-    left: 55%;
-    animation: waveSpanner 2.5s ease-in-out infinite;
-    transform-origin: center;
-}
-
-.about-image:hover .robot {
-    transform: scale(1.08) rotate(8deg);
-}
-
-/* Floating Animation */
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-}
-
-/* Waving Spanner Animation */
-@keyframes waveSpanner {
-    0%, 100% { transform: rotate(-25deg); }
-    50% { transform: rotate(25deg); }
-}
+   
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
