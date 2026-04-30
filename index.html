@@ -488,46 +488,103 @@
                 <span class="section-badge">IT SERVICES</span>
                 <h2>Computer Repair & IT Support</h2>
             </div>
-           
-            <div class="cards">
-                <div class="card">
+           <!-- 1. Computer & Laptop Repair -->
+            <div class="card expandable-card" data-id="repair">
+                <div class="card-header">
                     <div class="card-icon">💻</div>
                     <h3>Computer & Laptop Repair</h3>
-                    <p>Screen replacement, keyboard fixes, slow PCs, hardware upgrades.</p>
+                    <span class="toggle-icon">▼</span>
                 </div>
-               
-                <div class="card">
-                    <div class="card-icon">📡</div>
-                    <h3>Wi-Fi & Network Setup</h3>
-                    <p>Home & office WiFi, router setup, mesh systems, CCTV.</p>
-                </div>
-               
-                <div class="card">
-                    <div class="card-icon">🛡️</div>
-                    <h3>Cybersecurity & Virus Removal</h3>
-                    <p>Full scans, ransomware protection, password setup.</p>
-                </div>
-               
-                <div class="card">
-                    <div class="card-icon">☁️</div>
-                    <h3>Cloud Backup & Data Recovery</h3>
-                    <p>Recover lost files & set up automatic backups.</p>
-                </div>
-               
-                <div class="card">
-                    <div class="card-icon">📧</div>
-                    <h3>Email & Microsoft 365 Setup</h3>
-                    <p>Business email, printer setup, Google Workspace.</p>
-                </div>
-               
-                <div class="card">
-                    <div class="card-icon">📍</div>
-                    <h3>Remote IT Support</h3>
-                    <p>Fix your computer instantly from anywhere.</p>
+                <div class="service-list" id="repair-list">
+                    <div class="service-item"><span>Screen Replacement</span><span class="price">R650 – R1,200</span></div>
+                    <div class="service-item"><span>Keyboard Repair / Replacement</span><span class="price">R350 – R750</span></div>
+                    <div class="service-item"><span>Slow PC Optimization & Cleanup</span><span class="price">R350 (Special)</span></div>
+                    <div class="service-item"><span>Hardware Upgrade (RAM / SSD)</span><span class="price">R450 – R950</span></div>
+                    <div class="service-item"><span>Diagnostic & Troubleshooting</span><span class="price">R350</span></div>
                 </div>
             </div>
+
+            <!-- 2. Wi-Fi & Network Setup -->
+            <div class="card expandable-card" data-id="wifi">
+                <div class="card-header">
+                    <div class="card-icon">📡</div>
+                    <h3>Wi-Fi & Network Setup</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="service-list" id="wifi-list">
+                    <div class="service-item"><span>Home WiFi Setup & Optimization</span><span class="price">R450 – R850</span></div>
+                    <div class="service-item"><span>Office Network Setup</span><span class="price">R750 – R1,500</span></div>
+                    <div class="service-item"><span>Mesh WiFi System Installation</span><span class="price">R1,200 – R2,500</span></div>
+                    <div class="service-item"><span>CCTV Installation & Setup</span><span class="price">R850 – R2,000</span></div>
+                    <div class="service-item"><span>Router Configuration & Security</span><span class="price">R350</span></div>
+                </div>
+            </div>
+
+            <!-- 3. Cybersecurity & Virus Removal -->
+            <div class="card expandable-card" data-id="security">
+                <div class="card-header">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Cybersecurity & Virus Removal</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="service-list" id="security-list">
+                    <div class="service-item"><span>Virus & Malware Removal</span><span class="price">R450 – R750</span></div>
+                    <div class="service-item"><span>Ransomware Recovery</span><span class="price">R850 – R1,500</span></div>
+                    <div class="service-item"><span>Full System Security Scan</span><span class="price">R350</span></div>
+                    <div class="service-item"><span>Password Manager Setup</span><span class="price">R250</span></div>
+                    <div class="service-item"><span>Firewall & Antivirus Installation</span><span class="price">R400</span></div>
+                </div>
+            </div>
+
+            <!-- 4. Cloud Backup & Data Recovery -->
+            <div class="card expandable-card" data-id="cloud">
+                <div class="card-header">
+                    <div class="card-icon">☁️</div>
+                    <h3>Cloud Backup & Data Recovery</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="service-list" id="cloud-list">
+                    <div class="service-item"><span>Data Recovery (Deleted Files)</span><span class="price">R550 – R1,200</span></div>
+                    <div class="service-item"><span>Cloud Backup Setup (Google Drive / OneDrive)</span><span class="price">R350</span></div>
+                    <div class="service-item"><span>External Drive Backup Configuration</span><span class="price">R300</span></div>
+                    <div class="service-item"><span>Automatic Backup Solution</span><span class="price">R450</span></div>
+                </div>
+            </div>
+
+            <!-- 5. Email & Microsoft 365 Setup -->
+            <div class="card expandable-card" data-id="email">
+                <div class="card-header">
+                    <div class="card-icon">📧</div>
+                    <h3>Email & Microsoft 365 Setup</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="service-list" id="email-list">
+                    <div class="service-item"><span>Microsoft 365 / Google Workspace Setup</span><span class="price">R450</span></div>
+                    <div class="service-item"><span>Business Email Configuration</span><span class="price">R350</span></div>
+                    <div class="service-item"><span>Printer & Scanner Setup</span><span class="price">R300</span></div>
+                    <div class="service-item"><span>Email Migration & Backup</span><span class="price">R550</span></div>
+                </div>
+            </div>
+
+            <!-- 6. Remote IT Support -->
+            <div class="card expandable-card" data-id="remote">
+                <div class="card-header">
+                    <div class="card-icon">📍</div>
+                    <h3>Remote IT Support</h3>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="service-list" id="remote-list">
+                    <div class="service-item"><span>Remote Troubleshooting & Fix</span><span class="price">R250 – R450</span></div>
+                    <div class="service-item"><span>Software Installation & Support</span><span class="price">R200</span></div>
+                    <div class="service-item"><span>TeamViewer / AnyDesk Assistance</span><span class="price">R250</span></div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+               
+                
 
     <!-- MONTHLY SPECIAL SECTION -->
 <section id="monthly-special" style="background: rgba(0, 0, 0, 0.45);">
@@ -753,13 +810,33 @@
     </div>
 
     <script>
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('quoteForm');
-            if (event.target === modal) {
-                modal.style.display = "none";
+    // Make all expandable cards work
+    document.querySelectorAll('.expandable-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Prevent clicking inside the list from collapsing
+            if (e.target.closest('.service-list')) return;
+
+            const list = this.querySelector('.service-list');
+            const icon = this.querySelector('.toggle-icon');
+
+            const isOpen = list.style.display === 'block';
+
+            // Close all other cards first
+            document.querySelectorAll('.service-list').forEach(l => l.style.display = 'none');
+            document.querySelectorAll('.toggle-icon').forEach(i => i.textContent = '▼');
+
+            if (!isOpen) {
+                list.style.display = 'block';
+                icon.textContent = '▲';
             }
-        }
-    </script>
+        });
+    });
+
+    // Close quote modal
+    window.onclick = function(event) {
+        const modal = document.getElementById('quoteForm');
+        if (event.target === modal) modal.style.display = "none";
+    }
+</script>
 </body>
 </html>
