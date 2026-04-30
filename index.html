@@ -381,7 +381,81 @@
             border: 1px solid rgba(0, 212, 255, 0.2);
         }
         /* Animated Robot */
-   
+        /* Enhanced Animated Robot - Full Body */
+.about-image {
+    background: rgba(15, 30, 50, 0.92);
+    border-radius: 20px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid rgba(0, 212, 255, 0.35);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.robot-container {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.robot {
+    font-size: 160px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+.spanner {
+    font-size: 52px;
+    position: absolute;
+    top: 65px;
+    left: 25px;
+    z-index: 3;
+    animation: swingSpanner 2.8s ease-in-out infinite;
+    transform-origin: 80% 30%;
+}
+
+.wave-hand {
+    font-size: 48px;
+    position: absolute;
+    top: 45px;
+    right: 15px;
+    z-index: 3;
+    animation: waveHand 2.2s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-18px); }
+}
+
+/* Spanner Swing (Left Hand) */
+@keyframes swingSpanner {
+    0%, 100% { transform: rotate(-30deg); }
+    50% { transform: rotate(30deg); }
+}
+
+/* Right Hand Waving */
+@keyframes waveHand {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(25deg); }
+    50% { transform: rotate(-15deg); }
+    75% { transform: rotate(20deg); }
+}
+
+/* Hover Effect */
+.about-image:hover .robot-container {
+    animation-play-state: paused;
+}
+.about-image:hover .robot {
+    transform: scale(1.05);
+}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -658,10 +732,11 @@
             </div>
             
             <!-- Animated Robot -->
-            <div class="about-image">
+           <div class="about-image">
                 <div class="robot-container">
                     <div class="robot">🤖</div>
                     <div class="spanner">🔧</div>
+                    <div class="wave-hand">👋</div>
                 </div>
             </div>
         </div>
