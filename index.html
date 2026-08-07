@@ -12,7 +12,6 @@
     <meta name="geo.placename" content="Barberton, Mpumalanga">
     <meta name="geo.position" content="-25.7855;31.0455">
     <meta name="ICBM" content="-25.7855, 31.0455">
-
     <!-- Open Graph / Social -->
     <meta property="og:title" content="Computer Repair Barberton | Laptop Repairs & Screen Replacement | Percy's IT Support">
     <meta property="og:description" content="Same-day computer & laptop repair in Barberton, Mpumalanga. Screen replacement, slow PC fixes, password bypass & more. Local expert in Extension 14. Call 069 107 2071.">
@@ -21,7 +20,6 @@
     <meta property="og:image" content="https://percym25.github.io/IT-Support-1300/og-image.jpg">
     <meta property="og:site_name" content="Percy's IT Support">
     <meta property="og:locale" content="en_ZA">
-
     <!-- Additional Local SEO -->
     <meta name="business:contact_data:street_address" content="No 7921 Extension 14">
     <meta name="business:contact_data:locality" content="Barberton">
@@ -29,8 +27,7 @@
     <meta name="business:contact_data:postal_code" content="1300">
     <meta name="business:contact_data:country_name" content="South Africa">
     <meta name="business:contact_data:phone_number" content="+27691072071">
-
-    <!-- JSON-LD Schema - Enhanced LocalBusiness + Services -->
+    <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,8 +68,6 @@
       "hasMap": "https://www.google.com/maps/place/Barberton"
     }
     </script>
-
-    <!-- Service Schemas -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -112,10 +107,9 @@
       }
     }
     </script>
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-      
+     
         * {
             margin: 0;
             padding: 0;
@@ -131,12 +125,16 @@
             min-height: 100vh;
             margin: 0;
             padding: 0;
+            padding-top: 70px; /* space for fixed banner */
             background-image: url('background.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-color: #0a1729;
+        }
+        body.banner-closed {
+            padding-top: 0;
         }
         body::before {
             content: '';
@@ -153,7 +151,7 @@
             position: relative;
             z-index: 1;
         }
-      
+     
         .logo-font { font-family: 'Space Grotesk', sans-serif; }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
         nav {
@@ -165,35 +163,35 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.3);
             backdrop-filter: blur(10px);
         }
-      
+     
         nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 12px 16px;
         }
-      
+     
         .logo {
             display: flex;
             align-items: center;
             gap: 8px;
             flex-shrink: 0;
         }
-      
+     
         .logo img {
             height: 48px;
             width: 48px;
             border-radius: 8px;
             object-fit: cover;
         }
-      
+     
         .logo h1 {
             font-size: 18px;
             font-weight: 600;
             letter-spacing: -0.5px;
             color: white;
         }
-      
+     
         .logo p {
             font-size: 8px;
             color: #00d4ff;
@@ -201,29 +199,29 @@
             letter-spacing: 0.5px;
             margin-top: -2px;
         }
-      
+     
         .nav-links {
             display: none;
             gap: 20px;
             font-size: 14px;
             font-weight: 500;
         }
-      
+     
         .nav-links a {
             color: rgba(255,255,255,0.9);
             text-decoration: none;
         }
-      
+     
         .nav-links a:hover {
             color: #00d4ff;
         }
-      
+     
         .nav-buttons {
             display: flex;
             gap: 8px;
             align-items: center;
         }
-      
+     
         .btn {
             padding: 10px 16px;
             border: none;
@@ -238,24 +236,24 @@
             gap: 6px;
             white-space: nowrap;
         }
-      
+     
         .btn-quote {
             background: transparent;
             border: 2px solid #00d4ff;
             color: #00d4ff;
         }
-      
+     
         .btn-quote:hover {
             background: #00d4ff;
             color: #0a1729;
         }
-      
+     
         .btn-whatsapp {
             background: #25D366;
             color: white;
             padding: 10px 14px;
         }
-      
+     
         .btn-whatsapp:hover {
             background: #20c65c;
         }
@@ -265,11 +263,11 @@
             padding: 90px 16px 100px;
             text-align: center;
         }
-      
+     
         .hero .container {
             max-width: 900px;
         }
-      
+     
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -282,7 +280,7 @@
             margin-bottom: 16px;
             backdrop-filter: blur(10px);
         }
-      
+     
         .hero h1 {
             font-size: 32px;
             font-weight: 600;
@@ -292,21 +290,21 @@
             color: white;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
-      
+     
         .hero p {
             font-size: 15.5px;
             color: rgba(255,255,255,0.92);
             margin-bottom: 28px;
             line-height: 1.6;
         }
-      
+     
         .hero-buttons {
             display: flex;
             flex-direction: column;
             gap: 12px;
             margin-bottom: 32px;
         }
-      
+     
         .btn-primary {
             background: #00d4ff;
             color: #111827;
@@ -315,12 +313,12 @@
             width: 100%;
             font-weight: 600;
         }
-      
+     
         .btn-primary:hover {
             background: white;
             transform: translateY(-2px);
         }
-      
+     
         .section {
             padding: 50px 16px;
             background: rgba(0, 0, 0, 0.45);
@@ -345,15 +343,134 @@
             color: white;
         }
 
-        /* Notice Banner */
+        /* ========== AUGUST NOTICE BANNER ========== */
         .notice-banner {
-            background: linear-gradient(90deg, #ff9800, #f57c00);
-            color: #0a1729;
-            padding: 14px 16px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #fbbf24, #f59e0b, #fbbf24);
+            background-size: 200% 200%;
+            color: #1f2937;
+            z-index: 9999;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: bannerSlideIn 0.7s ease-out, gradientMove 4s ease infinite;
+            padding: 12px 16px;
+        }
+        .banner-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px 18px;
+            position: relative;
+            padding-right: 40px;
+        }
+        .banner-label {
+            background: #1f2937;
+            color: #fbbf24;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1px;
+            padding: 5px 12px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .banner-text {
+            font-weight: 600;
+            font-size: 14.5px;
+            line-height: 1.35;
             text-align: center;
+        }
+        .banner-text strong {
+            color: #000;
+        }
+        .banner-price {
+            font-size: 18px;
+            font-weight: 800;
+            background: #1f2937;
+            color: #fbbf24;
+            padding: 6px 14px;
+            border-radius: 999px;
+            animation: pricePulse 1.8s ease-in-out infinite;
+            white-space: nowrap;
+        }
+        .banner-btn {
+            background: #1f2937;
+            color: #fbbf24;
             font-weight: 700;
-            font-size: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            font-size: 14px;
+            padding: 8px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+        .banner-btn:hover {
+            background: #000;
+            transform: scale(1.05);
+        }
+        .banner-close {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.25);
+            border: none;
+            color: #1f2937;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+        .banner-close:hover {
+            background: rgba(0,0,0,0.45);
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes bannerSlideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes pricePulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7);
+            }
+            50% {
+                transform: scale(1.08);
+                box-shadow: 0 0 0 8px rgba(251, 191, 36, 0);
+            }
+        }
+
+        /* Mobile optimisation */
+        @media (max-width: 768px) {
+            body { padding-top: 95px; }
+            .notice-banner { padding: 10px 12px; }
+            .banner-inner {
+                gap: 8px;
+                padding-right: 36px;
+            }
+            .banner-label { font-size: 11px; padding: 4px 10px; }
+            .banner-text { font-size: 13px; width: 100%; }
+            .banner-price { font-size: 16px; padding: 5px 12px; }
+            .banner-btn { font-size: 13px; padding: 7px 14px; }
+            .banner-close { width: 28px; height: 28px; font-size: 18px; right: 4px; }
         }
 
         .cards {
@@ -361,7 +478,7 @@
             grid-template-columns: 1fr;
             gap: 20px;
         }
-      
+     
         .card, .review-card {
             background: rgba(15, 30, 50, 0.85);
             border: 1px solid rgba(0, 212, 255, 0.25);
@@ -369,8 +486,6 @@
             padding: 24px;
             backdrop-filter: blur(10px);
         }
-
-        /* Google Reviews */
         .google-reviews-box {
             background: rgba(15, 30, 50, 0.9);
             border: 2px solid #00d4ff;
@@ -394,20 +509,16 @@
             background: #3367d6;
             transform: translateY(-3px);
         }
-
-        /* RESPONSIVE */
         @media (min-width: 640px) {
             .hero h1 { font-size: 42px; }
             .cards { grid-template-columns: repeat(2, 1fr); gap: 24px; }
         }
-      
+     
         @media (min-width: 1024px) {
             .nav-links { display: flex; }
             .hero h1 { font-size: 58px; }
             .cards { grid-template-columns: repeat(3, 1fr); }
         }
-
-        /* FAQ */
         .faq-item {
             background: rgba(15, 30, 50, 0.8);
             border-radius: 12px;
@@ -432,9 +543,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- NOTICE BANNER -->
-    <div class="notice-banner">
-        <strong>JULY 2026 SPECIAL:</strong> BACK-IT-UP <strong>R150</strong> — Low on storage? Let us back up your important files this month only!
+    <!-- AUGUST 2026 NOTICE BANNER -->
+    <div class="notice-banner" id="augustBanner">
+        <div class="banner-inner">
+            <span class="banner-label">AUGUST 2026 SPECIAL</span>
+            <span class="banner-text">
+                <strong>Start-Up Pack</strong> — Win 10/11 + MS Office 2021 LTSC + Adobe Reader + VLC 
+                <strong>+ FREE Diagnostic &amp; Cleaning</strong>
+            </span>
+            <span class="banner-price">Only R950</span>
+            <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20want%20the%20August%20Start-Up%20Pack%20for%20R950" 
+               class="banner-btn" target="_blank">
+                Book Now
+            </a>
+            <button class="banner-close" onclick="closeBanner()" aria-label="Close banner">×</button>
+        </div>
     </div>
 
     <!-- NAVBAR -->
@@ -472,12 +595,12 @@
                 <span></span>
                 LOCAL COMPUTER REPAIR IN BARBERTON
             </div>
-          
+         
             <h1 class="logo-font">Computer Repair Barberton</h1>
-          
+         
             <p><strong>Same-day laptop repairs</strong>, screen replacement, slow computer fixes, password bypass &amp; more.<br>
             Trusted IT expert in Extension 14 serving all of Barberton &amp; Mpumalanga.</p>
-          
+         
             <div class="hero-buttons">
                 <button class="btn btn-primary" onclick="document.getElementById('quoteForm').style.display='block'">
                     <i class="fa-solid fa-paper-plane"></i> GET FREE QUOTE NOW
@@ -498,7 +621,7 @@
                 <h2>Computer & Laptop Repair Barberton</h2>
                 <p>Fast, reliable fixes for all your IT problems</p>
             </div>
-           
+          
             <div class="cards">
                 <div class="card">
                     <h3>Laptop Screen Replacement</h3>
@@ -530,17 +653,22 @@
         </div>
     </section>
 
-    <!-- MONTHLY SPECIAL -->
+    <!-- MONTHLY SPECIAL (updated to August) -->
     <section id="monthly-special" class="section" style="background: rgba(0,0,0,0.6);">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">JULY 2026 SPECIAL</span>
+                <span class="section-badge">AUGUST 2026 SPECIAL</span>
                 <h2>Limited Time Offers in Barberton</h2>
             </div>
             <div class="cards">
+                <div class="card">
+                    <strong>Start-Up Pack</strong><br>
+                    Win 10/11 + MS Office 2021 LTSC + Adobe Reader + VLC<br>
+                    <strong>+ FREE Diagnostic &amp; Cleaning</strong><br>
+                    <strong style="color:#fbbf24; font-size:20px;">R950</strong>
+                </div>
                 <div class="card">🐌 <strong>PC Tune-Up Special</strong><br>Performance boost + cleanup — <strong>R450</strong></div>
                 <div class="card">🛡️ Virus Removal — Free with any major repair</div>
-                <div class="card">🎯 First-time clients — <strong>30% off</strong></div>
             </div>
         </div>
     </section>
@@ -605,13 +733,11 @@
                 <h2>What Barberton Residents Say</h2>
             </div>
             <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <!-- Existing reviews + one more focused on keywords -->
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
                     <p>"Percy replaced my laptop screen same day and fixed the slow performance. Best computer repair in Barberton!"</p>
                     <strong>— Thabo Nkosi, Extension 14</strong>
                 </div>
-                <!-- More reviews can be added -->
             </div>
         </div>
     </section>
@@ -645,12 +771,11 @@
         </div>
     </section>
 
-    <!-- QUOTE MODAL (unchanged but kept) -->
+    <!-- QUOTE MODAL -->
     <div id="quoteForm" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:1000; padding:20px; overflow-y:auto;">
         <div style="background:rgba(15,30,50,0.95); max-width:520px; margin:40px auto; padding:30px; border-radius:16px; border:1px solid #00d4ff;">
             <h3>Get Your Free Quote</h3>
             <form action="https://formspree.io/f/xjgpnqpj" method="POST">
-                <!-- form fields same as before -->
                 <input type="text" name="full_name" placeholder="Full Name" required style="width:100%; padding:12px; margin:10px 0; border-radius:8px;">
                 <input type="email" name="email" placeholder="Email" required style="width:100%; padding:12px; margin:10px 0; border-radius:8px;">
                 <input type="tel" name="phone" placeholder="Phone" required style="width:100%; padding:12px; margin:10px 0; border-radius:8px;">
@@ -667,11 +792,11 @@
             q.addEventListener('click', () => {
                 const answer = q.nextElementSibling;
                 const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-                
+               
                 document.querySelectorAll('.faq-answer').forEach(a => {
                     a.style.maxHeight = '0px';
                 });
-                
+               
                 if (!isOpen) {
                     answer.style.maxHeight = answer.scrollHeight + 'px';
                 }
@@ -682,6 +807,21 @@
         window.onclick = function(e) {
             const modal = document.getElementById('quoteForm');
             if (e.target === modal) modal.style.display = "none";
+        }
+
+        // Banner close function
+        function closeBanner() {
+            const banner = document.getElementById('augustBanner');
+            banner.style.display = 'none';
+            document.body.classList.add('banner-closed');
+            // Remember closed state for this session
+            sessionStorage.setItem('bannerClosed', 'true');
+        }
+
+        // Check if banner was closed previously in this session
+        if (sessionStorage.getItem('bannerClosed') === 'true') {
+            document.getElementById('augustBanner').style.display = 'none';
+            document.body.classList.add('banner-closed');
         }
     </script>
 </body>
