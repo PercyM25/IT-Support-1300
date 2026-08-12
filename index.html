@@ -109,7 +109,7 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-     
+    
         * {
             margin: 0;
             padding: 0;
@@ -125,7 +125,7 @@
             min-height: 100vh;
             margin: 0;
             padding: 0;
-            padding-top: 70px; /* space for fixed banner */
+            padding-top: 70px;
             background-image: url('background.jpg');
             background-size: cover;
             background-position: center center;
@@ -151,7 +151,7 @@
             position: relative;
             z-index: 1;
         }
-     
+    
         .logo-font { font-family: 'Space Grotesk', sans-serif; }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
         nav {
@@ -163,35 +163,35 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.3);
             backdrop-filter: blur(10px);
         }
-     
+    
         nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 12px 16px;
         }
-     
+    
         .logo {
             display: flex;
             align-items: center;
             gap: 8px;
             flex-shrink: 0;
         }
-     
+    
         .logo img {
             height: 48px;
             width: 48px;
             border-radius: 8px;
             object-fit: cover;
         }
-     
+    
         .logo h1 {
             font-size: 18px;
             font-weight: 600;
             letter-spacing: -0.5px;
             color: white;
         }
-     
+    
         .logo p {
             font-size: 8px;
             color: #00d4ff;
@@ -199,29 +199,29 @@
             letter-spacing: 0.5px;
             margin-top: -2px;
         }
-     
+    
         .nav-links {
             display: none;
             gap: 20px;
             font-size: 14px;
             font-weight: 500;
         }
-     
+    
         .nav-links a {
             color: rgba(255,255,255,0.9);
             text-decoration: none;
         }
-     
+    
         .nav-links a:hover {
             color: #00d4ff;
         }
-     
+    
         .nav-buttons {
             display: flex;
             gap: 8px;
             align-items: center;
         }
-     
+    
         .btn {
             padding: 10px 16px;
             border: none;
@@ -236,24 +236,24 @@
             gap: 6px;
             white-space: nowrap;
         }
-     
+    
         .btn-quote {
             background: transparent;
             border: 2px solid #00d4ff;
             color: #00d4ff;
         }
-     
+    
         .btn-quote:hover {
             background: #00d4ff;
             color: #0a1729;
         }
-     
+    
         .btn-whatsapp {
             background: #25D366;
             color: white;
             padding: 10px 14px;
         }
-     
+    
         .btn-whatsapp:hover {
             background: #20c65c;
         }
@@ -263,11 +263,11 @@
             padding: 90px 16px 100px;
             text-align: center;
         }
-     
+    
         .hero .container {
             max-width: 900px;
         }
-     
+    
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -280,7 +280,7 @@
             margin-bottom: 16px;
             backdrop-filter: blur(10px);
         }
-     
+    
         .hero h1 {
             font-size: 32px;
             font-weight: 600;
@@ -290,21 +290,21 @@
             color: white;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
-     
+    
         .hero p {
             font-size: 15.5px;
             color: rgba(255,255,255,0.92);
             margin-bottom: 28px;
             line-height: 1.6;
         }
-     
+    
         .hero-buttons {
             display: flex;
             flex-direction: column;
             gap: 12px;
             margin-bottom: 32px;
         }
-     
+    
         .btn-primary {
             background: #00d4ff;
             color: #111827;
@@ -313,12 +313,12 @@
             width: 100%;
             font-weight: 600;
         }
-     
+    
         .btn-primary:hover {
             background: white;
             transform: translateY(-2px);
         }
-     
+    
         .section {
             padding: 50px 16px;
             background: rgba(0, 0, 0, 0.45);
@@ -436,8 +436,6 @@
             background: rgba(0,0,0,0.45);
             color: white;
         }
-
-        /* Animations */
         @keyframes bannerSlideIn {
             from { transform: translateY(-100%); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
@@ -457,8 +455,6 @@
                 box-shadow: 0 0 0 8px rgba(251, 191, 36, 0);
             }
         }
-
-        /* Mobile optimisation */
         @media (max-width: 768px) {
             body { padding-top: 95px; }
             .notice-banner { padding: 10px 12px; }
@@ -478,7 +474,7 @@
             grid-template-columns: 1fr;
             gap: 20px;
         }
-     
+    
         .card, .review-card {
             background: rgba(15, 30, 50, 0.85);
             border: 1px solid rgba(0, 212, 255, 0.25);
@@ -486,6 +482,90 @@
             padding: 24px;
             backdrop-filter: blur(10px);
         }
+
+        /* ========== ANIMATED EMOJIS + HOVER EFFECTS ========== */
+        .emoji-animated {
+            font-size: 42px;
+            display: inline-block;
+            margin-bottom: 12px;
+            line-height: 1;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+
+        .emoji-rocket {
+            animation: rocketBounce 1.8s ease-in-out infinite;
+        }
+
+        .emoji-snail {
+            animation: snailCrawl 2.5s ease-in-out infinite;
+        }
+
+        .emoji-shield {
+            animation: shieldPulse 1.6s ease-in-out infinite;
+        }
+
+        /* Hover effects */
+        .emoji-rocket:hover {
+            animation: rocketHover 0.6s ease-in-out infinite;
+            filter: drop-shadow(0 0 12px #fbbf24);
+            transform: scale(1.25);
+        }
+
+        .emoji-snail:hover {
+            animation: snailHover 0.8s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px #00d4ff);
+            transform: scale(1.2);
+        }
+
+        .emoji-shield:hover {
+            animation: shieldHover 0.5s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px #00d4ff);
+            transform: scale(1.3);
+        }
+
+        @keyframes rocketBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-12px) scale(1.1); }
+        }
+
+        @keyframes snailCrawl {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(6px); }
+            75% { transform: translateX(-6px); }
+        }
+
+        @keyframes shieldPulse {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(0, 212, 255, 0)); }
+            50% { transform: scale(1.15); filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.7)); }
+        }
+
+        @keyframes rocketHover {
+            0%, 100% { transform: translateY(0) scale(1.25) rotate(-5deg); }
+            50% { transform: translateY(-18px) scale(1.35) rotate(5deg); }
+        }
+
+        @keyframes snailHover {
+            0%, 100% { transform: translateX(0) scale(1.2); }
+            25% { transform: translateX(10px) scale(1.25); }
+            75% { transform: translateX(-10px) scale(1.25); }
+        }
+
+        @keyframes shieldHover {
+            0%, 100% { transform: scale(1.3) rotate(0deg); }
+            50% { transform: scale(1.4) rotate(8deg); }
+        }
+
+        .special-card {
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .special-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 212, 255, 0.2);
+        }
+
         .google-reviews-box {
             background: rgba(15, 30, 50, 0.9);
             border: 2px solid #00d4ff;
@@ -513,7 +593,7 @@
             .hero h1 { font-size: 42px; }
             .cards { grid-template-columns: repeat(2, 1fr); gap: 24px; }
         }
-     
+    
         @media (min-width: 1024px) {
             .nav-links { display: flex; }
             .hero h1 { font-size: 58px; }
@@ -548,11 +628,11 @@
         <div class="banner-inner">
             <span class="banner-label">AUGUST 2026 SPECIAL</span>
             <span class="banner-text">
-                <strong>Start-Up Pack</strong> — Win 10/11 + MS Office 2021 LTSC + Adobe Reader + VLC 
+                <strong>Start-Up Pack</strong> — Win 10/11 + MS Office 2021 LTSC + Adobe Reader + VLC
                 <strong>+ FREE Diagnostic &amp; Cleaning</strong>
             </span>
             <span class="banner-price">Only R950</span>
-            <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20want%20the%20August%20Start-Up%20Pack%20for%20R950" 
+            <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20want%20the%20August%20Start-Up%20Pack%20for%20R950"
                class="banner-btn" target="_blank">
                 Book Now
             </a>
@@ -595,12 +675,12 @@
                 <span></span>
                 LOCAL COMPUTER REPAIR IN BARBERTON
             </div>
-         
+        
             <h1 class="logo-font">Computer Repair Barberton</h1>
-         
+        
             <p><strong>Same-day laptop repairs</strong>, screen replacement, slow computer fixes, password bypass &amp; more.<br>
             Trusted IT expert in Extension 14 serving all of Barberton &amp; Mpumalanga.</p>
-         
+        
             <div class="hero-buttons">
                 <button class="btn btn-primary" onclick="document.getElementById('quoteForm').style.display='block'">
                     <i class="fa-solid fa-paper-plane"></i> GET FREE QUOTE NOW
@@ -621,7 +701,7 @@
                 <h2>Computer & Laptop Repair Barberton</h2>
                 <p>Fast, reliable fixes for all your IT problems</p>
             </div>
-          
+         
             <div class="cards">
                 <div class="card">
                     <h3>Laptop Screen Replacement</h3>
@@ -653,7 +733,7 @@
         </div>
     </section>
 
-    <!-- MONTHLY SPECIAL (updated to August) -->
+    <!-- MONTHLY SPECIAL with Animated Emojis -->
     <section id="monthly-special" class="section" style="background: rgba(0,0,0,0.6);">
         <div class="container">
             <div class="section-header">
@@ -661,14 +741,28 @@
                 <h2>Limited Time Offers in Barberton</h2>
             </div>
             <div class="cards">
-                <div class="card">
+                <!-- Start-Up Pack -->
+                <div class="card special-card">
+                    <div class="emoji-animated emoji-rocket">🚀</div>
                     <strong>Start-Up Pack</strong><br>
                     Win 10/11 + MS Office 2021 LTSC + Adobe Reader + VLC<br>
                     <strong>+ FREE Diagnostic &amp; Cleaning</strong><br>
-                    <strong style="color:#fbbf24; font-size:20px;">R950</strong>
+                    <strong style="color:#fbbf24; font-size:22px;">R950</strong>
                 </div>
-                <div class="card">🐌 <strong>PC Tune-Up Special</strong><br>Performance boost + cleanup — <strong>R450</strong></div>
-                <div class="card">🛡️ Virus Removal — Free with any major repair</div>
+
+                <!-- PC Tune-Up -->
+                <div class="card special-card">
+                    <div class="emoji-animated emoji-snail">🐌</div>
+                    <strong>PC Tune-Up Special</strong><br>
+                    Performance boost + cleanup — <strong>R450</strong>
+                </div>
+
+                <!-- Virus Removal -->
+                <div class="card special-card">
+                    <div class="emoji-animated emoji-shield">🛡️</div>
+                    <strong>Virus Removal</strong><br>
+                    Free with any major repair
+                </div>
             </div>
         </div>
     </section>
@@ -792,11 +886,11 @@
             q.addEventListener('click', () => {
                 const answer = q.nextElementSibling;
                 const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-               
+              
                 document.querySelectorAll('.faq-answer').forEach(a => {
                     a.style.maxHeight = '0px';
                 });
-               
+              
                 if (!isOpen) {
                     answer.style.maxHeight = answer.scrollHeight + 'px';
                 }
@@ -814,7 +908,6 @@
             const banner = document.getElementById('augustBanner');
             banner.style.display = 'none';
             document.body.classList.add('banner-closed');
-            // Remember closed state for this session
             sessionStorage.setItem('bannerClosed', 'true');
         }
 
