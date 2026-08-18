@@ -4,7 +4,7 @@
     <!-- Primary Meta Tags - Optimized for Barberton -->
     <title>Computer Repair Barberton | Same-Day Laptop Repairs & Screen Replacement | Percy's IT Support</title>
     <meta name="description" content="Same-day computer & laptop repair in Barberton, Mpumalanga. Screen replacement, slow PC fixes, virus removal & more. Local expert in Extension 14. Call 069 107 2071 for fast service.">
-    <meta name="keywords" content="computer repair barberton, laptop repairs barberton, laptop screen replacement barberton, slow computer fix barberton, computer password bypass barberton, it support barberton, same day computer repair mpumalanga, virus removal barberton, wifi setup barberton, data recovery barberton, extension 14 barberton">
+    <meta name="keywords" content="computer repair barberton, laptop repairs barberton, laptop screen replacement barberton, slow computer fix barberton, computer password bypass barberton, it support barberton, same day computer repair mpumalanga, virus removal barberton, data recovery barberton, extension 14 barberton">
     <meta name="author" content="Percy's IT Support">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -112,14 +112,6 @@
               "@type": "Service",
               "name": "Virus & Malware Removal",
               "description": "Complete virus and malware removal with security setup. Free with major repairs."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "WiFi Setup & Networking",
-              "description": "Home and business WiFi installation, router configuration and network troubleshooting in Barberton."
             }
           },
           {
@@ -370,10 +362,14 @@
         .section {
             padding: 50px 16px;
             background: rgba(0, 0, 0, 0.45);
+            position: relative;
+            overflow: hidden;
         }
         .section-header {
             text-align: center;
             margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
         }
         .section-badge {
             display: inline-block;
@@ -390,6 +386,32 @@
             margin-bottom: 12px;
             color: white;
         }
+
+        /* ========== FLOATING ANIMATED EMOJIS ========== */
+        .floating-emoji {
+            position: absolute;
+            font-size: 28px;
+            opacity: 0.18;
+            pointer-events: none;
+            z-index: 1;
+            animation: floatAround 8s ease-in-out infinite;
+        }
+        .floating-emoji:nth-child(2) { animation-delay: 1.5s; font-size: 22px; }
+        .floating-emoji:nth-child(3) { animation-delay: 3s; font-size: 32px; }
+        .floating-emoji:nth-child(4) { animation-delay: 4.5s; font-size: 20px; }
+
+        @keyframes floatAround {
+            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+            25% { transform: translateY(-18px) translateX(12px) rotate(5deg); }
+            50% { transform: translateY(-8px) translateX(-10px) rotate(-5deg); }
+            75% { transform: translateY(-22px) translateX(8px) rotate(3deg); }
+        }
+
+        /* Position helpers for different sections */
+        .emoji-top-left { top: 30px; left: 20px; }
+        .emoji-top-right { top: 40px; right: 25px; }
+        .emoji-bottom-left { bottom: 40px; left: 30px; }
+        .emoji-bottom-right { bottom: 30px; right: 20px; }
 
         /* ========== AUGUST NOTICE BANNER ========== */
         .notice-banner {
@@ -515,12 +537,15 @@
             .banner-price { font-size: 16px; padding: 5px 12px; }
             .banner-btn { font-size: 13px; padding: 7px 14px; }
             .banner-close { width: 28px; height: 28px; font-size: 18px; right: 4px; }
+            .floating-emoji { font-size: 20px !important; opacity: 0.12; }
         }
 
         .cards {
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
+            position: relative;
+            z-index: 2;
         }
     
         .card, .review-card {
@@ -568,7 +593,7 @@
             background: #20c65c;
         }
 
-        /* Animated Emojis */
+        /* Animated Emojis on specials */
         .emoji-animated {
             font-size: 42px;
             display: inline-block;
@@ -739,6 +764,8 @@
             padding: 30px;
             border-radius: 16px;
             border: 1px solid rgba(0, 212, 255, 0.3);
+            position: relative;
+            z-index: 2;
         }
         .booking-form input,
         .booking-form select,
@@ -899,8 +926,14 @@
         </div>
     </header>
 
-    <!-- GOOGLE RATING + REVIEWS (Moved Higher) -->
+    <!-- GOOGLE RATING + REVIEWS (Higher up) -->
     <section class="section" style="background: rgba(0,0,0,0.5); padding-top: 40px; padding-bottom: 40px;">
+        <!-- Floating emojis for Reviews -->
+        <div class="floating-emoji emoji-top-left">⭐</div>
+        <div class="floating-emoji emoji-top-right">💬</div>
+        <div class="floating-emoji emoji-bottom-left">👍</div>
+        <div class="floating-emoji emoji-bottom-right">⭐</div>
+
         <div class="container">
             <div class="google-reviews-box" style="margin-bottom: 30px;">
                 <div style="font-size: 28px; color: #fbbf24;">★★★★★</div>
@@ -919,19 +952,25 @@
                 <div class="review-card">
                     <div style="color:#fbbf24;">★★★★★</div>
                     <p>"Im happy with your service...keep it up Mchana"</p>
-                    <strong>— Sibusiso Maxwell</strong>
+                    <strong>— Sibusiso Maxwell, Barberton</strong>
                 </div>
                 <div class="review-card">
                     <div style="color:#fbbf24;">★★★★★</div>
-                    <p>"Great service!"</p>
+                    <p>"Forgot my Windows password. Percy helped me regain access quickly and safely. Great service!"</p>
                     <strong>— Lungelo Vilakazi</strong>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES with buttons -->
+    <!-- SERVICES (WiFi removed) -->
     <section id="services" class="section">
+        <!-- Floating emojis for Services -->
+        <div class="floating-emoji emoji-top-left">💻</div>
+        <div class="floating-emoji emoji-top-right">🔧</div>
+        <div class="floating-emoji emoji-bottom-left">🛠️</div>
+        <div class="floating-emoji emoji-bottom-right">🖥️</div>
+
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">EXPERT SERVICES</span>
@@ -982,16 +1021,6 @@
 
                 <div class="card service-card">
                     <span class="same-day">Same-day available</span>
-                    <h3>WiFi Setup & Networking</h3>
-                    <p>Home or business WiFi installation, router configuration, and network troubleshooting.</p>
-                    <div class="price">From R400</div>
-                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20WiFi%20setup" class="service-btn" target="_blank">
-                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
-                    </a>
-                </div>
-
-                <div class="card service-card">
-                    <span class="same-day">Same-day available</span>
                     <h3>Data Recovery & Backup</h3>
                     <p>Recover lost files and set up reliable cloud backups.</p>
                     <div class="price">From R500</div>
@@ -1005,13 +1034,18 @@
 
     <!-- MONTHLY SPECIAL with Countdown -->
     <section id="monthly-special" class="section" style="background: rgba(0,0,0,0.65);">
+        <!-- Floating emojis for Specials -->
+        <div class="floating-emoji emoji-top-left">🔥</div>
+        <div class="floating-emoji emoji-top-right">💰</div>
+        <div class="floating-emoji emoji-bottom-left">🎁</div>
+        <div class="floating-emoji emoji-bottom-right">⚡</div>
+
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">AUGUST 2026 SPECIAL • LIMITED TIME</span>
                 <h2>Limited Time Offers in Barberton</h2>
                 <p style="color:#fbbf24; font-weight:600;">Only a few slots left this week – Book now!</p>
                 
-                <!-- Countdown Timer -->
                 <div class="countdown" id="countdown">
                     <div class="countdown-item">
                         <div class="countdown-number" id="days">00</div>
@@ -1073,6 +1107,12 @@
 
     <!-- BOOK APPOINTMENT SECTION -->
     <section id="booking" class="section">
+        <!-- Floating emojis for Booking -->
+        <div class="floating-emoji emoji-top-left">📅</div>
+        <div class="floating-emoji emoji-top-right">📝</div>
+        <div class="floating-emoji emoji-bottom-left">✅</div>
+        <div class="floating-emoji emoji-bottom-right">🕒</div>
+
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">BOOK NOW</span>
@@ -1090,7 +1130,6 @@
                         <option value="Slow Computer / Tune-Up">Slow Computer / Tune-Up</option>
                         <option value="Password Bypass">Password Bypass</option>
                         <option value="Virus Removal">Virus Removal</option>
-                        <option value="WiFi Setup">WiFi Setup</option>
                         <option value="Data Recovery">Data Recovery</option>
                         <option value="Start-Up Pack">Start-Up Pack (R950)</option>
                         <option value="Other">Other</option>
@@ -1105,6 +1144,12 @@
 
     <!-- WHY US -->
     <section id="why-us" class="section">
+        <!-- Floating emojis for Why Us -->
+        <div class="floating-emoji emoji-top-left">🏆</div>
+        <div class="floating-emoji emoji-top-right">🤝</div>
+        <div class="floating-emoji emoji-bottom-left">💯</div>
+        <div class="floating-emoji emoji-bottom-right">🔒</div>
+
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">WHY CHOOSE US</span>
@@ -1129,6 +1174,12 @@
 
     <!-- FAQ -->
     <section id="faq" class="section">
+        <!-- Floating emojis for FAQ -->
+        <div class="floating-emoji emoji-top-left">❓</div>
+        <div class="floating-emoji emoji-top-right">💡</div>
+        <div class="floating-emoji emoji-bottom-left">📋</div>
+        <div class="floating-emoji emoji-bottom-right">🗣️</div>
+
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">COMMON QUESTIONS</span>
@@ -1157,6 +1208,12 @@
 
     <!-- CONTACT -->
     <section id="contact" class="section">
+        <!-- Floating emojis for Contact -->
+        <div class="floating-emoji emoji-top-left">📞</div>
+        <div class="floating-emoji emoji-top-right">💬</div>
+        <div class="floating-emoji emoji-bottom-left">📍</div>
+        <div class="floating-emoji emoji-bottom-right">👋</div>
+
         <div class="container">
             <h2 style="text-align:center; margin-bottom:30px;">Need Computer Repair in Barberton?</h2>
             <div style="text-align:center; font-size: 28px; margin: 20px 0;">
