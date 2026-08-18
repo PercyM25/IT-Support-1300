@@ -531,6 +531,43 @@
             backdrop-filter: blur(10px);
         }
 
+        /* Service card improvements */
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .service-card .price {
+            color: #fbbf24;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .same-day {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.15);
+            color: #00d4ff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        .service-btn {
+            margin-top: auto;
+            background: #25D366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            display: block;
+        }
+        .service-btn:hover {
+            background: #20c65c;
+        }
+
         /* Animated Emojis */
         .emoji-animated {
             font-size: 42px;
@@ -596,6 +633,35 @@
             box-shadow: 0 12px 25px rgba(0, 212, 255, 0.2);
         }
 
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            z-index: 9997;
+            text-decoration: none;
+            animation: pulseWhatsApp 2s infinite;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            background: #20c65c;
+        }
+        @keyframes pulseWhatsApp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
         /* Sticky Mobile CTA Bar */
         .sticky-cta-bar {
             display: none;
@@ -635,6 +701,66 @@
             body {
                 padding-bottom: 70px;
             }
+            .floating-whatsapp {
+                bottom: 90px;
+            }
+        }
+
+        /* Countdown */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .countdown-item {
+            background: rgba(0,0,0,0.4);
+            padding: 10px 14px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 70px;
+        }
+        .countdown-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fbbf24;
+        }
+        .countdown-label {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* Booking Form */
+        .booking-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(15, 30, 50, 0.9);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            background: rgba(0,0,0,0.3);
+            color: white;
+        }
+        .booking-form button {
+            width: 100%;
+            padding: 14px;
+            background: #00d4ff;
+            color: #111;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
         }
 
         .google-reviews-box {
@@ -724,8 +850,8 @@
             <div class="nav-links">
                 <a href="#services">Services</a>
                 <a href="#monthly-special">Specials</a>
+                <a href="#booking">Book</a>
                 <a href="#reviews">Reviews</a>
-                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="nav-buttons">
@@ -739,7 +865,7 @@
         </div>
     </nav>
 
-    <!-- HERO - Improved -->
+    <!-- HERO -->
     <header class="hero">
         <div class="container">
             <div class="hero-badge">
@@ -773,7 +899,38 @@
         </div>
     </header>
 
-    <!-- SERVICES -->
+    <!-- GOOGLE RATING + REVIEWS (Moved Higher) -->
+    <section class="section" style="background: rgba(0,0,0,0.5); padding-top: 40px; padding-bottom: 40px;">
+        <div class="container">
+            <div class="google-reviews-box" style="margin-bottom: 30px;">
+                <div style="font-size: 28px; color: #fbbf24;">★★★★★</div>
+                <p style="font-size: 21px; font-weight: 600; margin: 10px 0;">5.0 Rating on Google</p>
+                <a href="https://g.page/r/Cdd_W0kVfvz4EBM/review" target="_blank" class="google-btn">
+                    <i class="fa-brands fa-google"></i> Leave a Review
+                </a>
+            </div>
+
+            <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="review-card">
+                    <div style="color:#fbbf24;">★★★★★</div>
+                    <p>"Percy replaced my laptop screen same day and fixed the slow performance. Best computer repair in Barberton!"</p>
+                    <strong>— Thabo Nkosi, Extension 14</strong>
+                </div>
+                <div class="review-card">
+                    <div style="color:#fbbf24;">★★★★★</div>
+                    <p>"My PC was extremely slow. Percy did a full tune-up and now it runs like new. Highly recommend!"</p>
+                    <strong>— Sarah Mokoena, Barberton</strong>
+                </div>
+                <div class="review-card">
+                    <div style="color:#fbbf24;">★★★★★</div>
+                    <p>"Forgot my Windows password. Percy helped me regain access quickly and safely. Great service!"</p>
+                    <strong>— Johan van der Berg, Extension 14</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES with buttons -->
     <section id="services" class="section">
         <div class="container">
             <div class="section-header">
@@ -783,43 +940,96 @@
             </div>
          
             <div class="cards">
-                <div class="card">
+                <div class="card service-card">
+                    <span class="same-day">Same-day available</span>
                     <h3>Laptop Screen Replacement</h3>
                     <p>Cracked or broken laptop screen? We replace screens on most brands quickly and affordably in Barberton.</p>
-                    <strong>From R650</strong>
+                    <div class="price">From R650</div>
+                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20laptop%20screen%20replacement" class="service-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                    </a>
                 </div>
-                <div class="card">
+
+                <div class="card service-card">
+                    <span class="same-day">Same-day available</span>
                     <h3>Slow Computer Fixes & Optimization</h3>
-                    <p>Speed up your slow PC or laptop. Cleanup, updates, and performance boost. Same-day results.</p>
-                    <strong>Special: R350–R450</strong>
+                    <p>Speed up your slow PC or laptop. Cleanup, updates, and performance boost.</p>
+                    <div class="price">R350 – R450</div>
+                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20PC%20tune-up" class="service-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                    </a>
                 </div>
-                <div class="card">
-                    <h3>Computer Password Bypass & Recovery</h3>
+
+                <div class="card service-card">
+                    <span class="same-day">Same-day available</span>
+                    <h3>Computer Password Bypass</h3>
                     <p>Locked out of your computer or forgot Windows password? We help you regain access safely.</p>
+                    <div class="price">From R350</div>
+                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20password%20bypass" class="service-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                    </a>
                 </div>
-                <div class="card">
+
+                <div class="card service-card">
+                    <span class="same-day">Same-day available</span>
                     <h3>Virus & Malware Removal</h3>
                     <p>Complete virus removal and security setup. Protect your device from future threats.</p>
+                    <div class="price">From R300</div>
+                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20virus%20removal" class="service-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                    </a>
                 </div>
-                <div class="card">
+
+                <div class="card service-card">
+                    <span class="same-day">Same-day available</span>
                     <h3>WiFi Setup & Networking</h3>
                     <p>Home or business WiFi installation, router configuration, and network troubleshooting.</p>
+                    <div class="price">From R400</div>
+                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20WiFi%20setup" class="service-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                    </a>
                 </div>
-                <div class="card">
+
+                <div class="card service-card">
+                    <span class="same-day">Same-day available</span>
                     <h3>Data Recovery & Backup</h3>
                     <p>Recover lost files and set up reliable cloud backups.</p>
+                    <div class="price">From R500</div>
+                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20data%20recovery" class="service-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MONTHLY SPECIAL - Improved -->
+    <!-- MONTHLY SPECIAL with Countdown -->
     <section id="monthly-special" class="section" style="background: rgba(0,0,0,0.65);">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">AUGUST 2026 SPECIAL • LIMITED TIME</span>
                 <h2>Limited Time Offers in Barberton</h2>
                 <p style="color:#fbbf24; font-weight:600;">Only a few slots left this week – Book now!</p>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
             </div>
             
             <div class="cards">
@@ -861,6 +1071,38 @@
         </div>
     </section>
 
+    <!-- BOOK APPOINTMENT SECTION -->
+    <section id="booking" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">BOOK NOW</span>
+                <h2>Book an Appointment</h2>
+                <p>Prefer a specific day? Fill in the form and we’ll confirm via WhatsApp</p>
+            </div>
+
+            <div class="booking-form">
+                <form action="https://formspree.io/f/xjgpnqpj" method="POST">
+                    <input type="text" name="name" placeholder="Your Full Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <select name="service" required>
+                        <option value="">Select Service</option>
+                        <option value="Laptop Screen Replacement">Laptop Screen Replacement</option>
+                        <option value="Slow Computer / Tune-Up">Slow Computer / Tune-Up</option>
+                        <option value="Password Bypass">Password Bypass</option>
+                        <option value="Virus Removal">Virus Removal</option>
+                        <option value="WiFi Setup">WiFi Setup</option>
+                        <option value="Data Recovery">Data Recovery</option>
+                        <option value="Start-Up Pack">Start-Up Pack (R950)</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="date" name="preferred_date" required>
+                    <textarea name="message" rows="3" placeholder="Any additional details..."></textarea>
+                    <button type="submit">Request Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- WHY US -->
     <section id="why-us" class="section">
         <div class="container">
@@ -871,7 +1113,7 @@
             <div class="cards">
                 <div class="card">
                     <h3>🏠 Same-Day Local Service</h3>
-                    <p>Based in Extension 14. Quick response across Barberton and nearby areas. No unnecessary waiting.</p>
+                    <p>Based in Extension 14. Quick response across Barberton and nearby areas.</p>
                 </div>
                 <div class="card">
                     <h3>🔧 Honest & Experienced</h3>
@@ -913,36 +1155,6 @@
         </div>
     </section>
 
-    <!-- REVIEWS -->
-    <section id="reviews" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">HAPPY CUSTOMERS</span>
-                <h2>What Barberton Residents Say</h2>
-            </div>
-            <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Percy replaced my laptop screen same day and fixed the slow performance. Best computer repair in Barberton!"</p>
-                    <strong>— Thabo Nkosi, Extension 14</strong>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GOOGLE REVIEWS -->
-    <section id="google-reviews" class="section">
-        <div class="container">
-            <div class="google-reviews-box">
-                <div class="google-rating">★★★★★</div>
-                <p style="font-size: 21px; font-weight: 600;">5.0 Rating on Google</p>
-                <a href="https://g.page/r/Cdd_W0kVfvz4EBM/review" target="_blank" class="google-btn">
-                    <i class="fa-brands fa-google"></i> Leave a Review
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- CONTACT -->
     <section id="contact" class="section">
         <div class="container">
@@ -967,12 +1179,18 @@
                 <input type="text" name="full_name" placeholder="Full Name" required style="width:100%; padding:12px; margin:10px 0; border-radius:8px;">
                 <input type="email" name="email" placeholder="Email" required style="width:100%; padding:12px; margin:10px 0; border-radius:8px;">
                 <input type="tel" name="phone" placeholder="Phone" required style="width:100%; padding:12px; margin:10px 0; border-radius:8px;">
-                <textarea name="message" placeholder="Describe your issue (slow computer, screen replacement, password etc.)" rows="5" required style="width:100%; padding:12px; margin:10px 0; border-radius:8px;"></textarea>
+                <textarea name="message" placeholder="Describe your issue" rows="5" required style="width:100%; padding:12px; margin:10px 0; border-radius:8px;"></textarea>
                 <button type="submit" style="width:100%; padding:14px; background:#00d4ff; color:#111; border:none; border-radius:8px; font-weight:600;">SEND REQUEST</button>
             </form>
             <button onclick="document.getElementById('quoteForm').style.display='none'" style="margin-top:15px; width:100%; padding:12px;">Close</button>
         </div>
     </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20computer%20repair%20in%20Barberton" 
+       class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <!-- Sticky Mobile Call + WhatsApp Bar -->
     <div class="sticky-cta-bar">
@@ -1001,24 +1219,46 @@
             });
         });
 
-        // Close modal on outside click
+        // Close modal
         window.onclick = function(e) {
             const modal = document.getElementById('quoteForm');
             if (e.target === modal) modal.style.display = "none";
         }
 
-        // Banner close function
+        // Banner close
         function closeBanner() {
-            const banner = document.getElementById('augustBanner');
-            banner.style.display = 'none';
+            document.getElementById('augustBanner').style.display = 'none';
             document.body.classList.add('banner-closed');
             sessionStorage.setItem('bannerClosed', 'true');
         }
-
         if (sessionStorage.getItem('bannerClosed') === 'true') {
             document.getElementById('augustBanner').style.display = 'none';
             document.body.classList.add('banner-closed');
         }
+
+        // Countdown Timer - ends 31 August 2026
+        const endDate = new Date("August 31, 2026 23:59:59").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = endDate - now;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "<p style='color:#fbbf24;'>Offer has ended</p>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+        }, 1000);
     </script>
 </body>
 </html>
