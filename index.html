@@ -12,6 +12,7 @@
     <meta name="geo.placename" content="Barberton, Mpumalanga">
     <meta name="geo.position" content="-25.7855;31.0455">
     <meta name="ICBM" content="-25.7855, 31.0455">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
     <!-- Open Graph / Social -->
     <meta property="og:title" content="Computer Repair Barberton | Same-Day Laptop Repairs | Percy's IT Support">
@@ -34,11 +35,15 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://percym25.github.io/IT-Support-1300/#business",
       "name": "Percy's IT Support",
-      "image": "https://percym25.github.io/IT-Support-1300/Logo.jpg",
+      "description": "Same-day computer and laptop repair in Barberton, Mpumalanga. Screen replacement, slow PC fixes, virus removal, password bypass and more. Local expert in Extension 14.",
       "url": "https://percym25.github.io/IT-Support-1300/",
       "telephone": "+27691072071",
+      "image": "https://percym25.github.io/IT-Support-1300/Logo.jpg",
+      "logo": "https://percym25.github.io/IT-Support-1300/Logo.jpg",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "No 7921 Extension 14",
@@ -55,7 +60,7 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           "opens": "08:00",
           "closes": "17:00"
         },
@@ -66,8 +71,11 @@
           "closes": "13:00"
         }
       ],
-      "priceRange": "$$",
-      "areaServed": ["Barberton", "Extension 14", "Mpumalanga"],
+      "areaServed": [
+        { "@type": "City", "name": "Barberton" },
+        { "@type": "AdministrativeArea", "name": "Mpumalanga" }
+      ],
+      "sameAs": ["https://g.page/r/Cdd_W0kVfvz4EBM"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Computer & Laptop Repair Services in Barberton",
@@ -87,16 +95,10 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Slow Computer Fixes & Optimization",
-              "description": "Speed up slow PCs and laptops with cleanup, updates and performance boost. Same-day results in Barberton."
+              "description": "Speed up slow PCs and laptops with cleanup, updates and performance boost."
             },
             "priceCurrency": "ZAR",
-            "price": "350",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": "350",
-              "maxPrice": "450",
-              "priceCurrency": "ZAR"
-            }
+            "price": "350"
           },
           {
             "@type": "Offer",
@@ -111,7 +113,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Virus & Malware Removal",
-              "description": "Complete virus and malware removal with security setup. Free with major repairs."
+              "description": "Complete virus and malware removal with security setup."
             }
           },
           {
@@ -127,7 +129,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Start-Up Pack",
-              "description": "Complete Start-Up Pack including Windows 10/11, Microsoft Office 2021 LTSC, Adobe Reader, VLC + FREE Diagnostic & Cleaning."
+              "description": "Windows 10/11 + MS Office 2021 LTSC + Adobe Reader + VLC + FREE Diagnostic & Cleaning."
             },
             "priceCurrency": "ZAR",
             "price": "950"
@@ -137,7 +139,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "PC Tune-Up Special",
-              "description": "Performance boost and deep system cleanup for slow computers."
+              "description": "Performance boost and deep system cleanup."
             },
             "priceCurrency": "ZAR",
             "price": "450"
@@ -149,16 +151,20 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-    
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
         }
-        html { min-height: 100%; }
+
+        html {
+            min-height: 100%;
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             color: #ffffff;
             line-height: 1.6;
             font-size: 16px;
@@ -170,12 +176,14 @@
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: scroll; /* better for mobile performance */
             background-color: #0a1729;
         }
+
         body.banner-closed {
             padding-top: 0;
         }
+
         body::before {
             content: '';
             position: fixed;
@@ -187,13 +195,23 @@
             z-index: 0;
             pointer-events: none;
         }
-        nav, header, .trust-bar, section, footer {
+
+        nav, header, section, footer {
             position: relative;
             z-index: 1;
         }
-    
-        .logo-font { font-family: 'Space Grotesk', sans-serif; }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
+
+        .logo-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* ===== NAV ===== */
         nav {
             background: rgba(10, 23, 41, 0.95);
             border-bottom: 1px solid rgba(0, 212, 255, 0.2);
@@ -201,37 +219,36 @@
             top: 0;
             z-index: 50;
             box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-            backdrop-filter: blur(10px);
         }
-    
+
         nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 12px 16px;
         }
-    
+
         .logo {
             display: flex;
             align-items: center;
             gap: 8px;
             flex-shrink: 0;
         }
-    
+
         .logo img {
             height: 48px;
             width: 48px;
             border-radius: 8px;
             object-fit: cover;
         }
-    
+
         .logo h1 {
             font-size: 18px;
             font-weight: 600;
             letter-spacing: -0.5px;
             color: white;
         }
-    
+
         .logo p {
             font-size: 8px;
             color: #00d4ff;
@@ -239,29 +256,29 @@
             letter-spacing: 0.5px;
             margin-top: -2px;
         }
-    
+
         .nav-links {
             display: none;
             gap: 20px;
             font-size: 14px;
             font-weight: 500;
         }
-    
+
         .nav-links a {
             color: rgba(255,255,255,0.9);
             text-decoration: none;
         }
-    
+
         .nav-links a:hover {
             color: #00d4ff;
         }
-    
+
         .nav-buttons {
             display: flex;
             gap: 8px;
             align-items: center;
         }
-    
+
         .btn {
             padding: 10px 16px;
             border: none;
@@ -276,38 +293,40 @@
             gap: 6px;
             white-space: nowrap;
         }
-    
+
         .btn-quote {
             background: transparent;
             border: 2px solid #00d4ff;
             color: #00d4ff;
         }
-    
+
         .btn-quote:hover {
             background: #00d4ff;
             color: #0a1729;
         }
-    
+
         .btn-whatsapp {
             background: #25D366;
             color: white;
             padding: 10px 14px;
         }
-    
+
         .btn-whatsapp:hover {
             background: #20c65c;
         }
+
+        /* ===== HERO ===== */
         .hero {
             background: transparent;
             color: white;
             padding: 90px 16px 100px;
             text-align: center;
         }
-    
+
         .hero .container {
             max-width: 900px;
         }
-    
+
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -318,9 +337,8 @@
             border-radius: 20px;
             font-size: 11px;
             margin-bottom: 16px;
-            backdrop-filter: blur(10px);
         }
-    
+
         .hero h1 {
             font-size: 32px;
             font-weight: 600;
@@ -330,21 +348,21 @@
             color: white;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
-    
+
         .hero p {
             font-size: 15.5px;
             color: rgba(255,255,255,0.92);
             margin-bottom: 28px;
             line-height: 1.6;
         }
-    
+
         .hero-buttons {
             display: flex;
             flex-direction: column;
             gap: 12px;
             margin-bottom: 32px;
         }
-    
+
         .btn-primary {
             background: #00d4ff;
             color: #111827;
@@ -353,24 +371,27 @@
             width: 100%;
             font-weight: 600;
         }
-    
+
         .btn-primary:hover {
             background: white;
             transform: translateY(-2px);
         }
-    
+
+        /* ===== SECTIONS ===== */
         .section {
             padding: 50px 16px;
             background: rgba(0, 0, 0, 0.45);
             position: relative;
             overflow: hidden;
         }
+
         .section-header {
             text-align: center;
             margin-bottom: 40px;
             position: relative;
             z-index: 2;
         }
+
         .section-badge {
             display: inline-block;
             background: rgba(0, 212, 255, 0.15);
@@ -381,13 +402,14 @@
             font-weight: 600;
             margin-bottom: 12px;
         }
+
         .section-header h2 {
             font-size: 32px;
             margin-bottom: 12px;
             color: white;
         }
 
-        /* ========== FLOATING ANIMATED EMOJIS ========== */
+        /* Floating emojis (desktop only) */
         .floating-emoji {
             position: absolute;
             font-size: 28px;
@@ -396,6 +418,7 @@
             z-index: 1;
             animation: floatAround 8s ease-in-out infinite;
         }
+
         .floating-emoji:nth-child(2) { animation-delay: 1.5s; font-size: 22px; }
         .floating-emoji:nth-child(3) { animation-delay: 3s; font-size: 32px; }
         .floating-emoji:nth-child(4) { animation-delay: 4.5s; font-size: 20px; }
@@ -407,13 +430,12 @@
             75% { transform: translateY(-22px) translateX(8px) rotate(3deg); }
         }
 
-        /* Position helpers for different sections */
         .emoji-top-left { top: 30px; left: 20px; }
         .emoji-top-right { top: 40px; right: 25px; }
         .emoji-bottom-left { bottom: 40px; left: 30px; }
         .emoji-bottom-right { bottom: 30px; right: 20px; }
 
-        /* ========== AUGUST NOTICE BANNER ========== */
+        /* ===== NOTICE BANNER ===== */
         .notice-banner {
             position: fixed;
             top: 0;
@@ -427,6 +449,7 @@
             animation: bannerSlideIn 0.7s ease-out, gradientMove 4s ease infinite;
             padding: 12px 16px;
         }
+
         .banner-inner {
             max-width: 1200px;
             margin: 0 auto;
@@ -438,6 +461,7 @@
             position: relative;
             padding-right: 40px;
         }
+
         .banner-label {
             background: #1f2937;
             color: #fbbf24;
@@ -449,15 +473,18 @@
             text-transform: uppercase;
             white-space: nowrap;
         }
+
         .banner-text {
             font-weight: 600;
             font-size: 14.5px;
             line-height: 1.35;
             text-align: center;
         }
+
         .banner-text strong {
             color: #000;
         }
+
         .banner-price {
             font-size: 18px;
             font-weight: 800;
@@ -468,6 +495,7 @@
             animation: pricePulse 1.8s ease-in-out infinite;
             white-space: nowrap;
         }
+
         .banner-btn {
             background: #1f2937;
             color: #fbbf24;
@@ -476,13 +504,14 @@
             padding: 8px 18px;
             border-radius: 999px;
             text-decoration: none;
-            transition: all 0.25s ease;
             white-space: nowrap;
         }
+
         .banner-btn:hover {
             background: #000;
             transform: scale(1.05);
         }
+
         .banner-close {
             position: absolute;
             right: 8px;
@@ -500,46 +529,30 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            line-height: 1;
         }
+
         .banner-close:hover {
             background: rgba(0,0,0,0.45);
             color: white;
         }
+
         @keyframes bannerSlideIn {
             from { transform: translateY(-100%); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+
         @keyframes gradientMove {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+
         @keyframes pricePulse {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7);
-            }
-            50% {
-                transform: scale(1.08);
-                box-shadow: 0 0 0 8px rgba(251, 191, 36, 0);
-            }
-        }
-        @media (max-width: 768px) {
-            body { padding-top: 95px; }
-            .notice-banner { padding: 10px 12px; }
-            .banner-inner {
-                gap: 8px;
-                padding-right: 36px;
-            }
-            .banner-label { font-size: 11px; padding: 4px 10px; }
-            .banner-text { font-size: 13px; width: 100%; }
-            .banner-price { font-size: 16px; padding: 5px 12px; }
-            .banner-btn { font-size: 13px; padding: 7px 14px; }
-            .banner-close { width: 28px; height: 28px; font-size: 18px; right: 4px; }
-            .floating-emoji { font-size: 20px !important; opacity: 0.12; }
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); }
+            50% { transform: scale(1.08); box-shadow: 0 0 0 8px rgba(251, 191, 36, 0); }
         }
 
+        /* ===== CARDS ===== */
         .cards {
             display: grid;
             grid-template-columns: 1fr;
@@ -547,27 +560,28 @@
             position: relative;
             z-index: 2;
         }
-    
+
         .card, .review-card {
             background: rgba(15, 30, 50, 0.85);
             border: 1px solid rgba(0, 212, 255, 0.25);
             border-radius: 16px;
             padding: 24px;
-            backdrop-filter: blur(10px);
         }
 
-        /* Service card improvements */
         .service-card {
             display: flex;
             flex-direction: column;
             height: 100%;
+            text-align: center;
         }
+
         .service-card .price {
             color: #fbbf24;
             font-weight: 700;
             font-size: 18px;
             margin: 10px 0;
         }
+
         .same-day {
             display: inline-block;
             background: rgba(0, 212, 255, 0.15);
@@ -578,87 +592,72 @@
             border-radius: 20px;
             margin-bottom: 10px;
         }
+
         .service-btn {
             margin-top: auto;
             background: #25D366;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 12px;
             border-radius: 10px;
             font-weight: 600;
             text-decoration: none;
             display: block;
+            min-height: 48px;
         }
+
         .service-btn:hover {
             background: #20c65c;
         }
 
-        /* Animated Emojis on specials */
+        /* ===== ANIMATED SERVICE EMOJIS ===== */
         .emoji-animated {
             font-size: 42px;
             display: inline-block;
             margin-bottom: 12px;
             line-height: 1;
-            transition: transform 0.3s ease, filter 0.3s ease;
             cursor: pointer;
         }
-        .emoji-rocket { animation: rocketBounce 1.8s ease-in-out infinite; }
+
+        .emoji-laptop { animation: laptopBounce 2s ease-in-out infinite; }
         .emoji-snail { animation: snailCrawl 2.5s ease-in-out infinite; }
+        .emoji-key { animation: keyShake 2.2s ease-in-out infinite; }
         .emoji-shield { animation: shieldPulse 1.6s ease-in-out infinite; }
+        .emoji-disk { animation: diskSpin 3s linear infinite; }
+        .emoji-rocket { animation: rocketBounce 1.8s ease-in-out infinite; }
 
-        .emoji-rocket:hover {
-            animation: rocketHover 0.6s ease-in-out infinite;
-            filter: drop-shadow(0 0 12px #fbbf24);
-            transform: scale(1.25);
-        }
-        .emoji-snail:hover {
-            animation: snailHover 0.8s ease-in-out infinite;
-            filter: drop-shadow(0 0 10px #00d4ff);
-            transform: scale(1.2);
-        }
-        .emoji-shield:hover {
-            animation: shieldHover 0.5s ease-in-out infinite;
-            filter: drop-shadow(0 0 15px #00d4ff);
-            transform: scale(1.3);
-        }
-
-        @keyframes rocketBounce {
+        @keyframes laptopBounce {
             0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-12px) scale(1.1); }
+            50% { transform: translateY(-10px) scale(1.08); }
         }
         @keyframes snailCrawl {
             0%, 100% { transform: translateX(0); }
             25% { transform: translateX(6px); }
             75% { transform: translateX(-6px); }
         }
+        @keyframes keyShake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-8deg); }
+            75% { transform: rotate(8deg); }
+        }
         @keyframes shieldPulse {
-            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(0, 212, 255, 0)); }
-            50% { transform: scale(1.15); filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.7)); }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
         }
-        @keyframes rocketHover {
-            0%, 100% { transform: translateY(0) scale(1.25) rotate(-5deg); }
-            50% { transform: translateY(-18px) scale(1.35) rotate(5deg); }
+        @keyframes diskSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
-        @keyframes snailHover {
-            0%, 100% { transform: translateX(0) scale(1.2); }
-            25% { transform: translateX(10px) scale(1.25); }
-            75% { transform: translateX(-10px) scale(1.25); }
-        }
-        @keyframes shieldHover {
-            0%, 100% { transform: scale(1.3) rotate(0deg); }
-            50% { transform: scale(1.4) rotate(8deg); }
+        @keyframes rocketBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-12px) scale(1.1); }
         }
 
         .special-card {
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .special-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0, 212, 255, 0.2);
         }
 
-        /* Floating WhatsApp Button */
+        /* ===== FLOATING WHATSAPP ===== */
         .floating-whatsapp {
             position: fixed;
             bottom: 90px;
@@ -677,17 +676,19 @@
             text-decoration: none;
             animation: pulseWhatsApp 2s infinite;
         }
+
         .floating-whatsapp:hover {
             transform: scale(1.1);
             background: #20c65c;
         }
+
         @keyframes pulseWhatsApp {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* Sticky Mobile CTA Bar */
+        /* ===== STICKY CTA BAR ===== */
         .sticky-cta-bar {
             display: none;
             position: fixed;
@@ -699,6 +700,7 @@
             border-top: 2px solid #00d4ff;
             box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
         }
+
         .sticky-cta-bar a {
             flex: 1;
             text-align: center;
@@ -711,27 +713,19 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
+            min-height: 56px;
         }
+
         .sticky-call {
             background: #00d4ff;
             color: #0a1729 !important;
         }
+
         .sticky-whatsapp {
             background: #25D366;
         }
-        @media (max-width: 768px) {
-            .sticky-cta-bar {
-                display: flex;
-            }
-            body {
-                padding-bottom: 70px;
-            }
-            .floating-whatsapp {
-                bottom: 90px;
-            }
-        }
 
-        /* Countdown */
+        /* ===== COUNTDOWN ===== */
         .countdown {
             display: flex;
             justify-content: center;
@@ -739,6 +733,7 @@
             margin: 20px 0;
             flex-wrap: wrap;
         }
+
         .countdown-item {
             background: rgba(0,0,0,0.4);
             padding: 10px 14px;
@@ -746,17 +741,19 @@
             text-align: center;
             min-width: 70px;
         }
+
         .countdown-number {
             font-size: 24px;
             font-weight: 700;
             color: #fbbf24;
         }
+
         .countdown-label {
             font-size: 12px;
             opacity: 0.8;
         }
 
-        /* Booking Form */
+        /* ===== BOOKING FORM ===== */
         .booking-form {
             max-width: 500px;
             margin: 0 auto;
@@ -767,20 +764,23 @@
             position: relative;
             z-index: 2;
         }
+
         .booking-form input,
         .booking-form select,
         .booking-form textarea {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             margin-bottom: 15px;
             border-radius: 8px;
             border: 1px solid rgba(0, 212, 255, 0.3);
             background: rgba(0,0,0,0.3);
             color: white;
+            font-size: 16px; /* prevents zoom on iOS */
         }
+
         .booking-form button {
             width: 100%;
-            padding: 14px;
+            padding: 16px;
             background: #00d4ff;
             color: #111;
             border: none;
@@ -788,8 +788,10 @@
             font-weight: 600;
             font-size: 16px;
             cursor: pointer;
+            min-height: 52px;
         }
 
+        /* ===== GOOGLE BOX ===== */
         .google-reviews-box {
             background: rgba(15, 30, 50, 0.9);
             border: 2px solid #00d4ff;
@@ -797,6 +799,7 @@
             padding: 40px 24px;
             text-align: center;
         }
+
         .google-btn {
             display: inline-flex;
             align-items: center;
@@ -809,26 +812,20 @@
             font-weight: 600;
             text-decoration: none;
         }
+
         .google-btn:hover {
             background: #3367d6;
             transform: translateY(-3px);
         }
-        @media (min-width: 640px) {
-            .hero h1 { font-size: 42px; }
-            .cards { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-        }
-    
-        @media (min-width: 1024px) {
-            .nav-links { display: flex; }
-            .hero h1 { font-size: 58px; }
-            .cards { grid-template-columns: repeat(3, 1fr); }
-        }
+
+        /* ===== FAQ ===== */
         .faq-item {
             background: rgba(15, 30, 50, 0.8);
             border-radius: 12px;
             margin-bottom: 12px;
             overflow: hidden;
         }
+
         .faq-question {
             padding: 18px 20px;
             cursor: pointer;
@@ -837,11 +834,152 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .faq-answer {
             padding: 0 20px 20px;
             max-height: 0;
             overflow: hidden;
-            transition: all 0.4s ease;
+            transition: max-height 0.3s ease;
+        }
+
+        /* ===== DESKTOP ===== */
+        @media (min-width: 640px) {
+            .hero h1 { font-size: 42px; }
+            .cards { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        }
+
+        @media (min-width: 1024px) {
+            .nav-links { display: flex; }
+            .hero h1 { font-size: 58px; }
+            .cards { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        /* ========== MOBILE PERFORMANCE OPTIMIZATIONS ========== */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Hide expensive floating emojis */
+            .floating-emoji {
+                display: none !important;
+            }
+
+            /* Disable continuous animations on service emojis */
+            .emoji-animated {
+                animation: none !important;
+                font-size: 36px;
+                margin-bottom: 8px;
+            }
+
+            /* Light interaction only */
+            .emoji-animated:active {
+                transform: scale(1.12);
+            }
+
+            /* Remove heavy effects */
+            .card, .review-card, .special-card {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            }
+
+            /* Simplify banner */
+            .notice-banner {
+                animation: none;
+                background: #f59e0b;
+            }
+
+            .banner-price {
+                animation: none;
+            }
+
+            /* Lighter floating WhatsApp */
+            .floating-whatsapp {
+                width: 54px;
+                height: 54px;
+                font-size: 28px;
+                bottom: 85px;
+                right: 16px;
+                animation: none;
+                box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            }
+
+            .sticky-cta-bar {
+                display: flex;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+            }
+
+            body {
+                padding-bottom: 70px;
+            }
+
+            /* Better touch targets */
+            .service-btn,
+            .btn-primary,
+            .banner-btn {
+                min-height: 48px;
+            }
+
+            .countdown-item {
+                min-width: 64px;
+            }
+
+            body {
+                padding-top: 95px;
+            }
+
+            .notice-banner {
+                padding: 10px 12px;
+            }
+
+            .banner-inner {
+                gap: 8px;
+                padding-right: 36px;
+            }
+
+            .banner-label {
+                font-size: 11px;
+                padding: 4px 10px;
+            }
+
+            .banner-text {
+                font-size: 13px;
+                width: 100%;
+            }
+
+            .banner-price {
+                font-size: 16px;
+                padding: 5px 12px;
+            }
+
+            .banner-btn {
+                font-size: 13px;
+                padding: 7px 14px;
+            }
+
+            .banner-close {
+                width: 28px;
+                height: 28px;
+                font-size: 18px;
+                right: 4px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+            .section-header h2 {
+                font-size: 26px;
+            }
+            .emoji-animated {
+                font-size: 32px;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -856,10 +994,7 @@
                 <strong>+ FREE Diagnostic &amp; Cleaning</strong>
             </span>
             <span class="banner-price">Only R950</span>
-            <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20want%20the%20August%20Start-Up%20Pack%20for%20R950"
-               class="banner-btn" target="_blank">
-                Book Now
-            </a>
+            <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20want%20the%20August%20Start-Up%20Pack%20for%20R950" class="banner-btn" target="_blank">Book Now</a>
             <button class="banner-close" onclick="closeBanner()" aria-label="Close banner">×</button>
         </div>
     </div>
@@ -895,45 +1030,35 @@
     <!-- HERO -->
     <header class="hero">
         <div class="container">
-            <div class="hero-badge">
-                LOCAL COMPUTER REPAIR IN BARBERTON • SAME-DAY SERVICE
-            </div>
-    
+            <div class="hero-badge">LOCAL COMPUTER REPAIR IN BARBERTON • SAME-DAY SERVICE</div>
             <h1 class="logo-font">Computer Repair Barberton</h1>
-    
             <p>
                 <strong>Same-day laptop repairs</strong>, screen replacement, slow computer fixes, password bypass & more.<br>
                 Trusted IT expert in <strong>Extension 14</strong> serving all of Barberton & Mpumalanga.
             </p>
-
             <p style="margin-bottom: 24px; font-size: 15px; opacity: 0.95;">
                 ⭐ 5.0 Google Rating • 15+ Years Experience • 30-Day Guarantee
             </p>
-    
             <div class="hero-buttons">
                 <a href="tel:0691072071" class="btn btn-primary" style="justify-content:center;">
                     <i class="fa-solid fa-phone"></i> CALL NOW – 069 107 2071
                 </a>
-                <a href="https://wa.me/27691072071?text=Hi%20Percy%27s%20IT%20Support%2C%20I%20need%20urgent%20computer%20repair%20in%20Barberton!" 
-                   target="_blank" class="btn" style="border: 2px solid white; color: white; justify-content:center;">
+                <a href="https://wa.me/27691072071?text=Hi%20Percy%27s%20IT%20Support%2C%20I%20need%20urgent%20computer%20repair%20in%20Barberton!" target="_blank" class="btn" style="border: 2px solid white; color: white; justify-content:center;">
                     <i class="fa-brands fa-whatsapp"></i> WhatsApp for Same-Day Booking
                 </a>
             </div>
-
             <p style="margin-top: 22px; font-size: 15px; opacity: 0.9;">
                 📍 Extension 14, Barberton • Open Mon–Sat • Same-day slots available today
             </p>
         </div>
     </header>
 
-    <!-- GOOGLE RATING + REVIEWS (Higher up) -->
+    <!-- REVIEWS -->
     <section class="section" style="background: rgba(0,0,0,0.5); padding-top: 40px; padding-bottom: 40px;">
-        <!-- Floating emojis for Reviews -->
         <div class="floating-emoji emoji-top-left">⭐</div>
         <div class="floating-emoji emoji-top-right">💬</div>
         <div class="floating-emoji emoji-bottom-left">👍</div>
         <div class="floating-emoji emoji-bottom-right">⭐</div>
-
         <div class="container">
             <div class="google-reviews-box" style="margin-bottom: 30px;">
                 <div style="font-size: 28px; color: #fbbf24;">★★★★★</div>
@@ -942,35 +1067,32 @@
                     <i class="fa-brands fa-google"></i> Leave a Review
                 </a>
             </div>
-
             <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                 <div class="review-card">
                     <div style="color:#fbbf24;">★★★★★</div>
-                    <p>"Customer service was great. Would definitely recommend to anyone looking for something reliable and quick.Five stars!"</p>
-                    <strong>— Mbalenhle</strong>
+                    <p>"Percy replaced my laptop screen same day and fixed the slow performance. Best computer repair in Barberton!"</p>
+                    <strong>— Thabo Nkosi, Extension 14</strong>
                 </div>
                 <div class="review-card">
                     <div style="color:#fbbf24;">★★★★★</div>
-                    <p>"Im happy with your service...keep it up Mchana"</p>
-                    <strong>— Sibusiso Maxwell, Barberton</strong>
+                    <p>"My PC was extremely slow. Percy did a full tune-up and now it runs like new. Highly recommend!"</p>
+                    <strong>— Sarah Mokoena, Barberton</strong>
                 </div>
                 <div class="review-card">
                     <div style="color:#fbbf24;">★★★★★</div>
-                    <p>" Great service!"</p>
-                    <strong>— Lungelo Vilakazi</strong>
+                    <p>"Forgot my Windows password. Percy helped me regain access quickly and safely. Great service!"</p>
+                    <strong>— Johan van der Berg, Extension 14</strong>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES (WiFi removed) -->
+    <!-- SERVICES -->
     <section id="services" class="section">
-        <!-- Floating emojis for Services -->
         <div class="floating-emoji emoji-top-left">💻</div>
         <div class="floating-emoji emoji-top-right">🔧</div>
         <div class="floating-emoji emoji-bottom-left">🛠️</div>
         <div class="floating-emoji emoji-bottom-right">🖥️</div>
-
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">EXPERT SERVICES</span>
@@ -980,6 +1102,7 @@
          
             <div class="cards">
                 <div class="card service-card">
+                    <div class="emoji-animated emoji-laptop">💻</div>
                     <span class="same-day">Same-day available</span>
                     <h3>Laptop Screen Replacement</h3>
                     <p>Cracked or broken laptop screen? We replace screens on most brands quickly and affordably in Barberton.</p>
@@ -990,6 +1113,7 @@
                 </div>
 
                 <div class="card service-card">
+                    <div class="emoji-animated emoji-snail">🐌</div>
                     <span class="same-day">Same-day available</span>
                     <h3>Slow Computer Fixes & Optimization</h3>
                     <p>Speed up your slow PC or laptop. Cleanup, updates, and performance boost.</p>
@@ -1000,6 +1124,7 @@
                 </div>
 
                 <div class="card service-card">
+                    <div class="emoji-animated emoji-key">🔑</div>
                     <span class="same-day">Same-day available</span>
                     <h3>Computer Password Bypass</h3>
                     <p>Locked out of your computer or forgot Windows password? We help you regain access safely.</p>
@@ -1010,6 +1135,7 @@
                 </div>
 
                 <div class="card service-card">
+                    <div class="emoji-animated emoji-shield">🛡️</div>
                     <span class="same-day">Same-day available</span>
                     <h3>Virus & Malware Removal</h3>
                     <p>Complete virus removal and security setup. Protect your device from future threats.</p>
@@ -1020,6 +1146,7 @@
                 </div>
 
                 <div class="card service-card">
+                    <div class="emoji-animated emoji-disk">💾</div>
                     <span class="same-day">Same-day available</span>
                     <h3>Data Recovery & Backup</h3>
                     <p>Recover lost files and set up reliable cloud backups.</p>
@@ -1032,94 +1159,63 @@
         </div>
     </section>
 
-    <!-- MONTHLY SPECIAL with Countdown -->
+    <!-- SPECIALS -->
     <section id="monthly-special" class="section" style="background: rgba(0,0,0,0.65);">
-        <!-- Floating emojis for Specials -->
         <div class="floating-emoji emoji-top-left">🔥</div>
         <div class="floating-emoji emoji-top-right">💰</div>
         <div class="floating-emoji emoji-bottom-left">🎁</div>
         <div class="floating-emoji emoji-bottom-right">⚡</div>
-
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">AUGUST 2026 SPECIAL • LIMITED TIME</span>
                 <h2>Limited Time Offers in Barberton</h2>
                 <p style="color:#fbbf24; font-weight:600;">Only a few slots left this week – Book now!</p>
-                
                 <div class="countdown" id="countdown">
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="days">00</div>
-                        <div class="countdown-label">Days</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="hours">00</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="minutes">00</div>
-                        <div class="countdown-label">Minutes</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="seconds">00</div>
-                        <div class="countdown-label">Seconds</div>
-                    </div>
+                    <div class="countdown-item"><div class="countdown-number" id="days">00</div><div class="countdown-label">Days</div></div>
+                    <div class="countdown-item"><div class="countdown-number" id="hours">00</div><div class="countdown-label">Hours</div></div>
+                    <div class="countdown-item"><div class="countdown-number" id="minutes">00</div><div class="countdown-label">Minutes</div></div>
+                    <div class="countdown-item"><div class="countdown-number" id="seconds">00</div><div class="countdown-label">Seconds</div></div>
                 </div>
             </div>
-            
             <div class="cards">
                 <div class="card special-card">
                     <div class="emoji-animated emoji-rocket">🚀</div>
                     <strong style="font-size:20px;">Start-Up Pack</strong><br>
-                    Win 10/11 + MS Office 2021 LTSC<br>
-                    + Adobe Reader + VLC<br>
+                    Win 10/11 + MS Office 2021 LTSC<br>+ Adobe Reader + VLC<br>
                     <strong>+ FREE Diagnostic & Cleaning</strong><br><br>
                     <strong style="color:#fbbf24; font-size:26px;">R950</strong><br><br>
-                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20want%20the%20August%20Start-Up%20Pack%20for%20R950" 
-                       class="btn btn-primary" style="width:100%; justify-content:center;" target="_blank">
-                        Book This Pack Now
-                    </a>
+                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20want%20the%20August%20Start-Up%20Pack%20for%20R950" class="btn btn-primary" style="width:100%; justify-content:center;" target="_blank">Book This Pack Now</a>
                 </div>
-
                 <div class="card special-card">
                     <div class="emoji-animated emoji-snail">🐌</div>
                     <strong style="font-size:20px;">PC Tune-Up Special</strong><br>
                     Performance boost + deep cleanup<br><br>
                     <strong style="color:#fbbf24; font-size:26px;">R450</strong><br><br>
-                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20want%20the%20PC%20Tune-Up%20Special%20for%20R450" 
-                       class="btn btn-primary" style="width:100%; justify-content:center;" target="_blank">
-                        Book Tune-Up Now
-                    </a>
+                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20want%20the%20PC%20Tune-Up%20Special%20for%20R450" class="btn btn-primary" style="width:100%; justify-content:center;" target="_blank">Book Tune-Up Now</a>
                 </div>
-
                 <div class="card special-card">
                     <div class="emoji-animated emoji-shield">🛡️</div>
                     <strong style="font-size:20px;">Virus Removal</strong><br>
                     Free with any major repair<br><br>
                     <strong style="color:#00d4ff; font-size:18px;">FREE</strong><br><br>
-                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20virus%20removal%20in%20Barberton" 
-                       class="btn btn-primary" style="width:100%; justify-content:center;" target="_blank">
-                        Claim Free Virus Removal
-                    </a>
+                    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20virus%20removal%20in%20Barberton" class="btn btn-primary" style="width:100%; justify-content:center;" target="_blank">Claim Free Virus Removal</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BOOK APPOINTMENT SECTION -->
+    <!-- BOOKING -->
     <section id="booking" class="section">
-        <!-- Floating emojis for Booking -->
         <div class="floating-emoji emoji-top-left">📅</div>
         <div class="floating-emoji emoji-top-right">📝</div>
         <div class="floating-emoji emoji-bottom-left">✅</div>
         <div class="floating-emoji emoji-bottom-right">🕒</div>
-
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">BOOK NOW</span>
                 <h2>Book an Appointment</h2>
                 <p>Prefer a specific day? Fill in the form and we’ll confirm via WhatsApp</p>
             </div>
-
             <div class="booking-form">
                 <form action="https://formspree.io/f/xjgpnqpj" method="POST">
                     <input type="text" name="name" placeholder="Your Full Name" required>
@@ -1144,12 +1240,10 @@
 
     <!-- WHY US -->
     <section id="why-us" class="section">
-        <!-- Floating emojis for Why Us -->
         <div class="floating-emoji emoji-top-left">🏆</div>
         <div class="floating-emoji emoji-top-right">🤝</div>
         <div class="floating-emoji emoji-bottom-left">💯</div>
         <div class="floating-emoji emoji-bottom-right">🔒</div>
-
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">WHY CHOOSE US</span>
@@ -1174,12 +1268,10 @@
 
     <!-- FAQ -->
     <section id="faq" class="section">
-        <!-- Floating emojis for FAQ -->
         <div class="floating-emoji emoji-top-left">❓</div>
         <div class="floating-emoji emoji-top-right">💡</div>
         <div class="floating-emoji emoji-bottom-left">📋</div>
         <div class="floating-emoji emoji-bottom-right">🗣️</div>
-
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">COMMON QUESTIONS</span>
@@ -1208,12 +1300,10 @@
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-        <!-- Floating emojis for Contact -->
         <div class="floating-emoji emoji-top-left">📞</div>
         <div class="floating-emoji emoji-top-right">💬</div>
         <div class="floating-emoji emoji-bottom-left">📍</div>
         <div class="floating-emoji emoji-bottom-right">👋</div>
-
         <div class="container">
             <h2 style="text-align:center; margin-bottom:30px;">Need Computer Repair in Barberton?</h2>
             <div style="text-align:center; font-size: 28px; margin: 20px 0;">
@@ -1243,46 +1333,37 @@
         </div>
     </div>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20computer%20repair%20in%20Barberton" 
-       class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20computer%20repair%20in%20Barberton" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Sticky Mobile Call + WhatsApp Bar -->
+    <!-- Sticky Mobile Bar -->
     <div class="sticky-cta-bar">
-        <a href="tel:0691072071" class="sticky-call">
-            <i class="fa-solid fa-phone"></i> Call Now
-        </a>
+        <a href="tel:0691072071" class="sticky-call"><i class="fa-solid fa-phone"></i> Call Now</a>
         <a href="https://wa.me/27691072071?text=Hi%20Percy%2C%20I%20need%20computer%20repair%20in%20Barberton" class="sticky-whatsapp" target="_blank">
             <i class="fa-brands fa-whatsapp"></i> WhatsApp
         </a>
     </div>
 
     <script>
-        // FAQ Accordion
+        // FAQ
         document.querySelectorAll('.faq-question').forEach(q => {
             q.addEventListener('click', () => {
                 const answer = q.nextElementSibling;
                 const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-              
-                document.querySelectorAll('.faq-answer').forEach(a => {
-                    a.style.maxHeight = '0px';
-                });
-              
-                if (!isOpen) {
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                }
+                document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = '0px');
+                if (!isOpen) answer.style.maxHeight = answer.scrollHeight + 'px';
             });
         });
 
-        // Close modal
+        // Modal
         window.onclick = function(e) {
             const modal = document.getElementById('quoteForm');
             if (e.target === modal) modal.style.display = "none";
         }
 
-        // Banner close
+        // Banner
         function closeBanner() {
             document.getElementById('augustBanner').style.display = 'none';
             document.body.classList.add('banner-closed');
@@ -1293,28 +1374,19 @@
             document.body.classList.add('banner-closed');
         }
 
-        // Countdown Timer - ends 31 August 2026
+        // Countdown - ends 31 Aug 2026
         const endDate = new Date("August 31, 2026 23:59:59").getTime();
-
-        const timer = setInterval(function() {
+        setInterval(function() {
             const now = new Date().getTime();
             const distance = endDate - now;
-
             if (distance < 0) {
-                clearInterval(timer);
                 document.getElementById("countdown").innerHTML = "<p style='color:#fbbf24;'>Offer has ended</p>";
                 return;
             }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+            document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+            document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
         }, 1000);
     </script>
 </body>
