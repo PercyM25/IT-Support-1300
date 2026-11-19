@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://percym25.github.io/IT-Support-1300/sitemap.xml
